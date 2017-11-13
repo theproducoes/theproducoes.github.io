@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main>
+
+      {% if page.layout != "home" %}
+
+      {% else %}
+      <div class="featured" id="featured" data-turbolinks-permanent>
+        <div class="container">
+          <div id="feed"></div>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="container">
+
+        <div class="columns">
+          <div class="column-left">
+            {{ content }}
+          </div>
+          <div class="column-right" id="column-right" data-turbolinks-permanent>
+            <div class="card">
+              <div class="card-title">
+                <h1>Elencos Atualizados</h1>
+              </div>
+              <div class="card-subtitle">
+                <h2>Brasileirão 2017</h2>
+              </div>
+              <div class="card-content teams">
+                  <img src="{{ "/assets/img/escudos/Atletico-GO-65.png" | relative_url }}" alt="Atlético-GO" title="Atlético-GO">
+                  <img src="{{ "/assets/img/escudos/atletico-pr_2015_65.png" | relative_url }}" alt="Atlético-PR" title="Atlético-PR">
+                  <img src="{{ "/assets/img/escudos/atletico_mg_60x60.png" | relative_url }}" alt="Atlético-MG" title="Atlético-MG">
+                  <img src="{{ "/assets/img/escudos/avai_60x60_.png" | relative_url }}" alt="Avaí" title="Avaí">
+                  <img src="{{ "/assets/img/escudos/bahia_60x60.png" | relative_url }}" alt="Bahia" title="Bahia">
+                  <img src="{{ "/assets/img/escudos/botafogo_60x60.png" | relative_url }}" alt="Botafogo" title="Botafogo">
+                  <img src="{{ "/assets/img/escudos/corinthians_60x60.png" | relative_url }}" alt="Corinthians" title="Corinthians">
+                  <img src="{{ "/assets/img/escudos/coritiba65.png" | relative_url }}" alt="Coritiba" title="Coritiba">
+                  <img src="{{ "/assets/img/escudos/cruzeiro_65.png" | relative_url }}" alt="Cruzeiro" title="Cruzeiro">
+                  <img src="{{ "/assets/img/escudos/Escudo-Chape-165.png" | relative_url }}" alt="Chapecoense" title="Chapecoense">
+                  <img src="{{ "/assets/img/escudos/flamengo_60x60.png" | relative_url }}" alt="Flamengo" title="Flamengo">
+                  <img src="{{ "/assets/img/escudos/fluminense_60x60.png" | relative_url }}" alt="Fluminense" title="Fluminense">
+                  <img src="{{ "/assets/img/escudos/gremio_60x60.png" | relative_url }}" alt="Grêmio" title="Grêmio">
+                  <img src="{{ "/assets/img/escudos/palmeiras_60x60.png" | relative_url }}" alt="Palmeiras" title="Palmeiras">
+                  <img src="{{ "/assets/img/escudos/ponte_preta_60x60.png" | relative_url }}" alt="Ponte Preta" title="Ponte Preta">
+                  <img src="{{ "/assets/img/escudos/santos_60x60.png" | relative_url }}" alt="Santos" title="Santos">
+                  <img src="{{ "/assets/img/escudos/sao_paulo_60x60.png" | relative_url }}" alt="São Paulo" title="São Paulo">
+                  <img src="{{ "/assets/img/escudos/sport65.png" | relative_url }}" alt="Sport" title="Sport">
+                  <img src="{{ "/assets/img/escudos/Vasco-65.png" | relative_url }}" alt="Vasco" title="Vasco">
+                  <img src="{{ "/assets/img/escudos/vitoria_60x60.png" | relative_url }}" alt="Vitória" title="Vitória">
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">
+                <h1>Notícias</h1>
+              </div>
+              <div class="card-content news">
+                  <div id="feed2"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">
+                <h1>Opinião</h1>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Leandro Prado</h2>
+                  <p>Muito bom o patch! Tem o brasileirão atualizado.</p>
+                </blockquote>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Leandro Prado</h2>
+                  <p>Muito bom o patch! Tem o brasileirão atualizado.</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">
+                <h1>Opinião</h1>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Lorem ipsum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </blockquote>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Lorem ipsum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">
+                <h1>Opinião</h1>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Lorem ipsum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </blockquote>
+              </div>
+              <div class="card-content opinion">
+                <div class="author-img">
+                  
+                </div>
+                <blockquote>
+                  <h2>Lorem ipsum</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

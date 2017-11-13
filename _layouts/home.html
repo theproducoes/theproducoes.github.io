@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<div class="banner">
+  <img src="{{ "/assets/img/banner.jpg" | relative_url }}">
+</div>
+
+<div class="posts">
+  
+  {{ content }}
+
+    {% for post in paginator.posts %}
+      <div class="post">
+        <div class="post-img">
+          <a href="{{ post.url | relative_url }}">
+          <figure>
+            <img src="{{ "/assets/img/posts/" | relative_url }}{{ post.image }}.jpg" alt="{{ post.title | escape }}" title="{{ post.title | escape }}">
+          </figure>
+          </a>
+        </div>
+        <div class="post-text">
+
+          <div class="category">
+            {% for category in post.categories %}
+              <em>{{ category }}</em>
+            {% endfor %}
+          </div>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+        </div>
+      </div>
+    {% endfor %}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+
+<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination"> 
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&laquo; Anterior</a>
+  {% else %}
+    <span>&laquo; Anterior</span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Próxima &raquo;</a>
+  {% else %}
+    <span>Próxima &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+
+</div>
