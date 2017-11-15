@@ -32,7 +32,7 @@ header {
 	margin: 0 0 20px 0;
 	.inner-header {
 		width: 100%;
-		height: 74px;
+		padding: 7px 0 7px 0;
 		background-color: #47BA73;
 		display: flex;
 		align-items: center;
@@ -52,6 +52,7 @@ header {
 					color: #fff;
 					font-size: 32px;
 					font-weight: 600;
+					margin: 0 0 0 40px;
 					-moz-transition: opacity .3s ease;
     				-o-transition: opacity .3s ease;
     				-webkit-transition: opacity .3s ease;
@@ -65,7 +66,8 @@ header {
 				.item {
 					display: inline-block;
 					img {
-						height: 35px;
+						height: 30px;
+						margin: 5px;
 					}
 				}
 			}
@@ -73,10 +75,10 @@ header {
 	}
 	.sub-header {
 		width: 100%;
-		height: 42px;
 		background-color: #40A767;
 		display: flex;
 		align-items: center;
+		text-align: center;
 		.container {
 			display: flex;
 			justify-content: center;
@@ -128,6 +130,7 @@ main {
 			display: flex;
 			.column-left {
 				flex: 1 2 510px;
+				margin-bottom: 25px;
 				.banner {
 					width: 100;
 					margin: 0 0 22px 0;
@@ -167,6 +170,7 @@ main {
 								color: #333;
 							    font-size: 16px;
 							    font-style: normal;
+							    text-transform: lowercase;
 							}
 							h2 {
 								font-size: 24px;
@@ -200,7 +204,7 @@ main {
 						display: flex;
 						align-items: center;
 						padding: 0px 16px 0px 16px;
-						h1{
+						h3{
 							color: #fff;
 							font-family: proximanova-bold,"Helvetica Neue",Arial,sans-serif;
 							font-size: 16px;
@@ -215,7 +219,7 @@ main {
 						align-items: center;
 						border-top: 1px solid #eaeaea;
 						border-bottom: 1px solid #eaeaea;
-						h2 {
+						h4 {
 							font-family: opensans-light,"Helvetica Neue",Arial,sans-serif;
 							font-size: 25px;
 							font-weight: 300;
@@ -258,6 +262,9 @@ main {
 							}
 						}
 					}
+					.card-content.fb-page {
+						text-align: center;
+					}
 					.card-content.news {
 						#feed2 {
 							div {
@@ -279,9 +286,11 @@ main {
 article {
 	.post-header {
 		.post-title{
-			font-size: 32px;
-			line-height: 38px;
+			font-size: 27px;
 			color: #333333;
+		}
+		.post-meta {
+			color: #999;
 		}
 	}
 	.post-content {
@@ -291,6 +300,7 @@ article {
 			text-align: center;
 			margin-bottom: 15px;
 			img {
+				width: auto;
 				max-width: 100%;
 			}
 			iframe {
@@ -301,9 +311,19 @@ article {
 			}
 		}
 		p {
-			font-size: 20px;
-			line-height: 35px;
+			font-size: 18px;
+    		line-height: 27px;
 			color: #484848;
+			margin: 0 0 15px 0;
+		}
+		ul {
+			font-size: 18px;
+			padding: 0 0 0 25px;
+			margin: 0 0 15px 0;
+		}
+		ol {
+			font-size: 18px;
+			padding: 0 0 0 25px;
 			margin: 0 0 15px 0;
 		}
 	}
@@ -393,13 +413,12 @@ footer {
 				flex-flow: row wrap;
 				.column-left {
 					flex: 1 2 510px;
-					margin-bottom: 25px;
 				}
 				.column-right {
 					flex: none;
 				    display: flex;
 				    width: 780px;
-				    height: 1500px;
+				    height: 1300px;
 				    flex-direction: column;
 				    flex-flow: column wrap;
 				    align-items: center;
@@ -435,6 +454,34 @@ footer {
 	}
 }
 @media screen and (max-width: 640px) {
+	header {
+		.inner-header {
+			.container {
+				flex-direction: column;
+				order: -1;
+				.header-left {
+					display: none;
+				}
+				.site-title {
+					a {
+						font-size: 25px;
+						margin: 0 0 0 0px;
+					}
+				}
+			}
+		}
+	}
+	.featured {
+		#feed {
+			div {
+				h1 {
+					a {
+						font-size: 28px;
+					}
+				}
+			}
+		}
+	}
  	main {
  		.container {
  			.columns {
@@ -472,6 +519,57 @@ footer {
  			}
  		}
  	}
+ 	article {
+		.post-content {
+			figure {
+				iframe {
+				    height: 290px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	article {
+		.post-content {
+			figure {
+				iframe {
+				    height: 240px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 450px) {
+	main {
+ 		.container {
+ 			.columns {
+ 				.column-left {
+					.posts {
+						.post {
+							.post-img {
+								figure {
+								    padding-bottom: 56%;
+									img {
+									    top: 0px;
+									}
+								}
+							}
+						}
+					}
+				}
+ 			}
+ 		}
+ 	}
+	article {
+		.post-content {
+			figure {
+				iframe {
+				    height: 200px;
+				}
+			}
+		}
+	}
 }
 /**
  * Download button
@@ -488,7 +586,7 @@ footer {
 .download-button {
   display: inline-block; /* 1 */
   margin-right: 10px; /* 2 */
-  margin-top: 30px; /* 3 */
+  margin-top: 15px; /* 3 */
   padding: 30px 30px 30px 80px; /* 4 */
   color: #686868; /* 5 */
   text-decoration: none; /* 6 */

@@ -12,13 +12,23 @@ layout: default
 
     {% for post in paginator.posts %}
       <div class="post">
+        {% if post.video_id != null %}
         <div class="post-img">
           <a href="{{ post.url | relative_url }}">
           <figure>
-            <img src="{{ "/assets/img/posts/" | relative_url }}{{ post.image }}.jpg" alt="{{ post.title | escape }}" title="{{ post.title | escape }}">
+            <img src="https://img.youtube.com/vi/{{ post.video_id }}/mqdefault.jpg" alt="{{ post.title | escape }}" title="{{ post.title | escape }}">
           </figure>
           </a>
         </div>
+        {% else %}
+        <div class="post-img">
+          <a href="{{ post.url | relative_url }}">
+          <figure>
+            <img src="{{ "/assets/img/posts" | relative_url }}{{ post.image }}" alt="{{ post.title | escape }}" title="{{ post.title | escape }}">
+          </figure>
+          </a>
+        </div>
+        {% endif %}
         <div class="post-text">
 
           <div class="category">
@@ -36,9 +46,6 @@ layout: default
         </div>
       </div>
     {% endfor %}
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
 
 <!-- pagination -->
 {% if paginator.total_pages > 1 %}

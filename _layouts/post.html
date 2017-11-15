@@ -16,14 +16,18 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    {% if page.image %}
+    {% if page.video_id == null %}
       <figure>
-        <img src="{{ "/assets/img/posts/" | relative_url }}{{ page.image }}.jpg" alt="{{ page.title | escape }}" title="{{ page.title | escape }}">
+        <img src="{{ "/assets/img/posts" | relative_url }}{{ page.image }}" alt="{{ page.title | escape }}" title="{{ page.title | escape }}">
+      </figure>
+    {% else %}
+      <figure>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.video_id }}" frameborder="0" gesture="media" allowfullscreen></iframe>
       </figure>
     {% endif %}
     {{ content }}
     {% if page.downloads %}
-      <h2>Links</h2>
+      <h2>Download</h2>
       <div class="download">
         {% for download in page.downloads %}
           <a class="download-button" href="{{ download.link }}" data-filesize="{{ download.size }}">{{ download.name }}</a>

@@ -45,13 +45,13 @@
       </div>
       <div class="header-right">
         <div class="item">
-          <a href="">
-            <img src="{{ "/assets/img/facebook-icon.svg" | relative_url }}">
+          <a href="https://fb.com/theproducoes">
+            <img src="{{ "/assets/img/facebook-icon.svg" | relative_url }}" alt="Nossa página no Facebook" title="Nossa página no Facebook">
           </a>
         </div>
         <div class="item">
           <a href="https://www.youtube.com/channel/UCKWbuyXLe40PbD6Azj5tlVQ">
-            <img src="{{ "/assets/img/youtube-icon.svg" | relative_url }}">
+            <img src="{{ "/assets/img/youtube-icon.svg" | relative_url }}" alt="Nosso canal no YouTube" title="Nosso canal no YouTube">
           </a>
         </div>
       </div>
@@ -62,10 +62,12 @@
       <nav>
         <ul>
           <li><a href="{{ "/" | relative_url }}">Página Inicial</a></li>
-          {% for post in site.categories['atualização'] limit:1 %}
-            <li><a href="{{ post.url | relative_url }}">Download</a></li>
+          {% for post in site.categories['Atualizações'] limit:1 %}
+            <li><a href="{{ post.url | relative_url }}">Atualização</a></li>
           {% endfor %}
-          <li><a href="{{ "/contato" | relative_url }}">Contato</a></li>
+          <li><a href="{{ "/2017/11/ultimate-dvd-fifa-08/" | relative_url }}">Ultimate DVD</a></li>
+          <li><a href="{{ "/2017/11/fat-master-08/" | relative_url }}">FAT Master</a></li>
+          <li><a href="{{ "/contato/" | relative_url }}">Contato</a></li>
         </ul>
       </nav>
     </div>
