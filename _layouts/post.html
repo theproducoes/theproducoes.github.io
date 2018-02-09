@@ -18,7 +18,7 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {% if page.video_id == null %}
       <figure>
-        <img src="{{ "/assets/img/posts" | relative_url }}{{ page.image }}" alt="{{ page.title | escape }}" title="{{ page.title | escape }}">
+        <img src="{{ "/assets/img/" | relative_url }}{{ page.image }}" alt="{{ page.title | escape }}" title="{{ page.title | escape }}">
       </figure>
     {% else %}
       <figure>

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Kits do Brasileirão 2017"
-image: "/2017/11/kits-do-brasileirao-2017.jpg"
+image: "posts/2017/11/kits-do-brasileirao-2017.jpg"
 downloads:
   - name: Kits Brasileirão 2017
     link: https://goo.gl/MEPTrk

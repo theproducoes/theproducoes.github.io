@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Creation Master 08"
-image: "/2017/12/creation-master-08.jpg"
+image: "posts/2017/12/creation-master-08.jpg"
 downloads:
   - name: CM 08
     link: https://goo.gl/TiStJK

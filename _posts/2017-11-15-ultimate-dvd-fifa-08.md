@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Ultimate DVD FIFA 08"
-image: "/2017/11/ultimate-dvd-fifa-08.jpg"
+image: "posts/2017/11/ultimate-dvd-fifa-08.jpg"
 downloads:
   - name: Ultimate DVD
     link: https://goo.gl/WL9qPo

@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Ultimate DVD FIFA 08 + Elencos Brasileirão 2017"
-image: "/2017/11/ultimate-dvd-fifa-08-elencos-brasileirao-2017.jpg"
+image: "posts/2017/11/ultimate-dvd-fifa-08-elencos-brasileirao-2017.jpg"
 downloads:
   - name: Atualização 2017.1 by THE
     link: https://goo.gl/BBvDxy

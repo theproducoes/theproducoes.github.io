@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: "Brasileirão 2018 - Atualização 18.0"
-image: "/2018/02/brasileirao-2018-atualizacao-18-0.jpg"
+image: "posts/2018/02/brasileirao-2018-atualizacao-18-0.jpg"
 downloads:
   - name: Atualização 18.0 by THE
     link: https://goo.gl/P3RCUY
