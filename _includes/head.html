@@ -7,10 +7,587 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="viewport" content="width=device-width, user-scalable=no">
 
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <!--<link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">-->
   <link rel="stylesheet" href="{{ "/assets/barra-globocom.min.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif; }
+
+.glbbarrawidget {
+  background-color: #F3F3F3; }
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto; }
+
+header {
+  margin: 0 0 20px 0; }
+  header .inner-header {
+    width: 100%;
+    padding: 7px 0 7px 0;
+    background-color: #9F1617;
+    display: flex;
+    align-items: center; }
+    header .inner-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      header .inner-header .container .header-left .item img {
+        height: 55px; }
+      header .inner-header .container .site-title a {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 600;
+        margin: 0 0 0 40px;
+        -moz-transition: opacity .3s ease;
+        -o-transition: opacity .3s ease;
+        -webkit-transition: opacity .3s ease;
+        transition: opacity .3s ease; }
+      header .inner-header .container .site-title a:hover {
+        opacity: .7; }
+      header .inner-header .container .header-right .item {
+        display: inline-block; }
+        header .inner-header .container .header-right .item img {
+          height: 30px;
+          margin: 5px; }
+  header .sub-header {
+    width: 100%;
+    background-color: #871314;
+    display: flex;
+    align-items: center;
+    text-align: center; }
+    header .sub-header .container {
+      display: flex;
+      justify-content: center; }
+    header .sub-header nav ul {
+      list-style: none; }
+      header .sub-header nav ul li {
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+        header .sub-header nav ul li a {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: none;
+          display: block;
+          padding: 11px;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 500; }
+      header .sub-header nav ul li:hover {
+        background: rgba(0, 0, 0, 0.1); }
+
+.featured {
+  margin: 0 0 25px 0; }
+  .featured #feed div {
+    text-align: center; }
+    .featured #feed div h1 a {
+      font-size: 35px;
+      color: #1F6ED4;
+      display: block; }
+
+main {
+  flex: 1; }
+  main .container {
+    max-width: 1170px; }
+    main .container .columns {
+      display: flex; }
+      main .container .columns .column-left {
+        flex: 1 2 510px;
+        margin-bottom: 25px; }
+        main .container .columns .column-left .banner {
+          width: 100;
+          margin: 0 0 22px 0; }
+          main .container .columns .column-left .banner img {
+            width: 100%; }
+        main .container .columns .column-left .posts .post {
+          display: flex;
+          border-bottom: 1px solid #c8c8c8;
+          min-height: 220px;
+          margin-bottom: 25px; }
+          main .container .columns .column-left .posts .post .post-img {
+            flex: 0 0 330px; }
+            main .container .columns .column-left .posts .post .post-img figure {
+              position: relative;
+              background: #fbfbfb;
+              margin: 3px 0 10px 0;
+              width: 100%;
+              height: 185px;
+              padding-bottom: 46%;
+              overflow: hidden;
+              border-radius: 3px; }
+              main .container .columns .column-left .posts .post .post-img figure img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0; }
+          main .container .columns .column-left .posts .post .post-text {
+            padding: 15px 15px 15px 15px; }
+            main .container .columns .column-left .posts .post .post-text em {
+              color: #333;
+              font-size: 16px;
+              font-style: normal;
+              text-transform: lowercase; }
+            main .container .columns .column-left .posts .post .post-text h2 {
+              font-size: 24px;
+              line-height: 28px; }
+              main .container .columns .column-left .posts .post .post-text h2 a {
+                color: #1F6ED4; }
+            main .container .columns .column-left .posts .post .post-text span {
+              color: #999; }
+      main .container .columns .column-right {
+        flex: 0 0 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; }
+        main .container .columns .column-right .card {
+          display: flex;
+          flex-direction: column;
+          width: 355px;
+          border-radius: 3px 3px 3px 3px;
+          border: 1px solid #c8c8c8;
+          margin: 0 0 30px 0; }
+          main .container .columns .column-right .card .card-title {
+            height: 46px;
+            background-color: #871314;
+            display: flex;
+            align-items: center;
+            padding: 0px 16px 0px 16px; }
+            main .container .columns .column-right .card .card-title h3 {
+              color: #fff;
+              font-family: proximanova-bold,"Helvetica Neue",Arial,sans-serif;
+              font-size: 16px;
+              text-transform: uppercase; }
+          main .container .columns .column-right .card .card-subtitle {
+            height: 72px;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea; }
+            main .container .columns .column-right .card .card-subtitle h4 {
+              font-family: opensans-light,"Helvetica Neue",Arial,sans-serif;
+              font-size: 25px;
+              font-weight: 300;
+              color: #333; }
+          main .container .columns .column-right .card .card-content.teams {
+            text-align: center;
+            padding: 10px 7px 10px 7px; }
+            main .container .columns .column-right .card .card-content.teams img {
+              width: 45px;
+              margin: 13px 7px 13px 7px; }
+          main .container .columns .column-right .card .card-content.opinion {
+            display: flex;
+            padding: 15px; }
+            main .container .columns .column-right .card .card-content.opinion .author-img {
+              height: 90px;
+              width: 90px;
+              min-height: 90px;
+              min-width: 90px;
+              background-color: #000;
+              border-radius: 50% 50%; }
+            main .container .columns .column-right .card .card-content.opinion blockquote {
+              text-align: center;
+              width: 100%;
+              padding: 0 0 0 10px; }
+              main .container .columns .column-right .card .card-content.opinion blockquote h2 {
+                color: #999;
+                display: block;
+                font-family: "proximanova-bold",Helvetica,sans-serif;
+                font-size: 13px;
+                text-transform: uppercase; }
+              main .container .columns .column-right .card .card-content.opinion blockquote p {
+                color: #3b9c00;
+                font-size: 18px; }
+          main .container .columns .column-right .card .card-content.fb-page {
+            text-align: center; }
+          main .container .columns .column-right .card .card-content.news #feed2 div a {
+            color: #1F6ED4;
+            font-size: 18px;
+            border-bottom: 1px solid #E6E6E6;
+            display: block;
+            padding: 10px; }
+
+article .post-header .post-title {
+  font-size: 27px;
+  color: #333333; }
+article .post-header .post-meta {
+  color: #999; }
+article .post-content {
+  margin: 0 0 20px 0; }
+  article .post-content figure {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px; }
+    article .post-content figure img {
+      width: auto;
+      max-width: 100%; }
+    article .post-content figure iframe {
+      height: 350px;
+      max-height: 100%;
+      width: 600px;
+      max-width: 100%; }
+  article .post-content p {
+    font-size: 18px;
+    line-height: 27px;
+    color: #484848;
+    margin: 0 0 15px 0; }
+  article .post-content ul {
+    font-size: 18px;
+    padding: 0 0 0 25px;
+    margin: 0 0 15px 0; }
+  article .post-content ol {
+    font-size: 18px;
+    padding: 0 0 0 25px;
+    margin: 0 0 15px 0; }
+
+.pagination a, .pagination span {
+  padding: 7px 18px;
+  border: 1px solid #eee;
+  margin-left: -2px;
+  margin-right: -2px;
+  background-color: #ffffff;
+  display: inline-block; }
+
+.pagination a:hover {
+  background-color: #f1f1f1;
+  color: #333; }
+
+.pagination {
+  text-align: center; }
+
+footer {
+  width: 100%;
+  background-color: #9F1617; }
+  footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; }
+    footer .container span {
+      color: #fff; }
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 90%; } }
+@media screen and (max-width: 1100px) {
+  main .container .columns .column-left .posts .post {
+    display: flex;
+    border-bottom: 1px solid #c8c8c8;
+    min-height: 160px;
+    margin-bottom: 25px; }
+    main .container .columns .column-left .posts .post .post-img {
+      flex: 0 0 230px; }
+      main .container .columns .column-left .posts .post .post-img figure {
+        position: relative;
+        background: #fbfbfb;
+        margin: 3px 0 10px 0;
+        width: 100%;
+        height: 138px;
+        padding-bottom: 46%;
+        overflow: hidden;
+        border-radius: 3px; }
+        main .container .columns .column-left .posts .post .post-img figure img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0; } }
+@media screen and (max-width: 960px) {
+  main .container .columns {
+    flex-flow: row wrap; }
+    main .container .columns .column-left {
+      flex: 1 2 510px; }
+    main .container .columns .column-right {
+      flex: none;
+      display: flex;
+      width: 780px;
+      height: 1300px;
+      flex-direction: column;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 auto; } }
+@media screen and (max-width: 880px) {
+  main .container .columns {
+    flex-flow: row wrap; }
+    main .container .columns .column-left {
+      flex: 1 2 510px;
+      margin-bottom: 25px; }
+    main .container .columns .column-right {
+      flex: 1 1 400px;
+      display: flex;
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; }
+      main .container .columns .column-right .card {
+        width: 100%; } }
+@media screen and (max-width: 640px) {
+  header .inner-header .container {
+    flex-direction: column;
+    order: -1; }
+    header .inner-header .container .header-left {
+      display: none; }
+    header .inner-header .container .site-title a {
+      font-size: 25px;
+      margin: 0 0 0 0px; }
+
+  .featured #feed div h1 a {
+    font-size: 28px; }
+
+  main .container .columns .column-left .posts .post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #c8c8c8;
+    min-height: 160px;
+    margin-bottom: 25px; }
+    main .container .columns .column-left .posts .post .post-img {
+      flex: 0 0 auto; }
+      main .container .columns .column-left .posts .post .post-img figure {
+        position: relative;
+        background: #fbfbfb;
+        margin: 3px 0 0px 0;
+        width: 100%;
+        height: auto;
+        padding-bottom: 36%;
+        overflow: hidden;
+        border-radius: 3px; }
+        main .container .columns .column-left .posts .post .post-img figure img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: -25px;
+          left: 0; }
+
+  article .post-content figure iframe {
+    height: 290px; } }
+@media screen and (max-width: 500px) {
+  article .post-content figure iframe {
+    height: 240px; } }
+@media screen and (max-width: 450px) {
+  main .container .columns .column-left .posts .post .post-img figure {
+    padding-bottom: 56%; }
+    main .container .columns .column-left .posts .post .post-img figure img {
+      top: 0px; }
+
+  article .post-content figure iframe {
+    height: 200px; } }
+/**
+ * Download button
+ * 1. Make the button a block level element while giving the ability to put several of them on the same line
+ * 2. Add some space between next to each others download buttons
+ * 3. Vertical rhythm
+ * 4. Inner spacing, larger on the left side for the icon
+ * 5. Color (reseting the initial blue color)
+ * 6. Remove the initial underline
+ * 7. Add a border around the button to clearly delimitate it from the background
+ * 8. Enable position context for pseudo-element
+ * 9. Make all properties transitioned when changing state
+ */
+.download-button {
+  display: inline-block;
+  /* 1 */
+  margin-right: 10px;
+  /* 2 */
+  margin-top: 15px;
+  /* 3 */
+  padding: 30px 30px 30px 80px;
+  /* 4 */
+  color: #686868;
+  /* 5 */
+  text-decoration: none;
+  /* 6 */
+  border: 1px solid #E3E3E3;
+  /* 7 */
+  position: relative;
+  /* 8 */
+  transition: 0.15s;
+  /* 9 */ }
+
+/**
+ * Hover and focus state for the button
+ * 1. Slightly changing the border color
+ * 2. Remove the initial blue glow on focus
+ */
+.download-button:focus,
+.download-button:hover {
+  border-color: #E31A4C;
+  /* 1 */
+  outline: none;
+  /* 2 */ }
+
+/**
+ * Launching short CSS animation on click to give visual feedback
+ */
+.download-button:active {
+  animation: enlight 0.5s; }
+
+/**
+ * Arrow icon, displayed as a pseudo-element to keep DOM simple
+ * 1. Display the pseudo-element
+ * 2. Use a SVG as a background image, not repeated and centered
+ * 3. Enable abolute positioning for the pseudo-element within its parent
+ * 4. Make it as high as the button
+ * 5. Align it on the left of the button
+ * 6. Give it the same width as the left padding of the button
+ */
+.download-button::before {
+  content: '';
+  /* 1 */
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2037/download.svg") no-repeat center;
+  /* 2 */
+  position: absolute;
+  /* 3 */
+  top: 0;
+  /* 4 */
+  bottom: 0;
+  /* 4 */
+  left: 0;
+  /* 5 */
+  width: 80px;
+  /* 6 */ }
+
+/**
+ * File size, displayed as a pseudo-element to keep DOM simple
+ * only if the button has the `data-filesize` attribute
+ * Ref: https://twitter.com/viki53/status/590496142988738561
+ * 1. Display the content of the `data-filesize` attribute
+ * 2. Slightly reduce the font-size of the filesize
+ * 3. Make the color slightly lighter than the filename
+ * 4. Create a gap between the filename and the filesize
+ */
+.download-button[data-filesize]::after {
+  content: "(" attr(data-filesize) ")";
+  /* 1 */
+  font-size: 0.8em;
+  /* 2 */
+  color: #969696;
+  /* 3 */
+  margin-left: 10px;
+  /* 4 */ }
+
+/**
+ * Active animation, playing with box-shadow
+ */
+@keyframes enlight {
+  to {
+    box-shadow: 0 0 0 8px #fce8ed; } }
+/**
+ * Demo style
+ */
+form header {
+  margin: 0 0 20px 0; }
+  form header div {
+    font-size: 90%;
+    color: #999; }
+  form header h2 {
+    margin: 0 0 5px 0; }
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0; }
+  form > div > fieldset > div > div {
+    margin: 0 0 5px 0; }
+  form > div > label {
+    width: 25%;
+    float: left;
+    padding-right: 10px; }
+
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px; }
+
+form > div > div {
+  width: 75%;
+  float: right; }
+form > div > fieldset > div {
+  width: 75%;
+  float: right; }
+form > div > fieldset label {
+  font-size: 90%; }
+
+fieldset {
+  border: 0;
+  padding: 0; }
+
+input[type=text], input[type=email], input[type=url], input[type=password] {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+
+textarea {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+
+input[type=text], input[type=email], input[type=url], input[type=password] {
+  width: 50%; }
+input[type=text]:focus, input[type=email]:focus, input[type=url]:focus, input[type=password]:focus {
+  outline: 0;
+  border-color: #4697e4; }
+
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4; }
+
+form #saveForm {
+  padding: 5px 15px 5px 15px;
+  font-size: 16px; }
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; }
+    form > div > label {
+      width: 100%;
+      float: none;
+      margin: 0 0 5px 0; }
+
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0; }
+
+  form > div > div, form > div > fieldset > div {
+    width: 100%;
+    float: none; }
+
+  input[type=text], input[type=email], input[type=url], input[type=password] {
+    width: 100%; }
+
+  textarea, select {
+    width: 100%; } }
+@media (min-width: 1200px) {
+  form > div > label, legend {
+    text-align: right; } }
+
+  </style>
 
   <script async defer src="{{ "/assets/js/turbolinks.min.js" | prepend: site.baseurl }}" data-turbolinks-eval=false></script>
 
