@@ -3,10 +3,6 @@ layout: post
 comments: true
 title: "Ultimate DVD FIFA 08"
 image: "posts/2017/11/ultimate-dvd-fifa-08.jpg"
-downloads:
-  - name: Ultimate DVD
-    link: https://goo.gl/WL9qPo
-    size: 371.8 MB
 date: 2017-11-15 05:15:21 -0200
 categories: Patchs
 ---
@@ -44,3 +40,8 @@ Copa da Uefa no modo Torneio
 \- Placas de publicidade reais  
 \- Novos menus de fundo e abertura  
 \- Jogabilidade melhorada  
+
+<h2>Download</h2>
+<div class="download">
+  <a class="download-button" href="https://goo.gl/WL9qPo" data-filesize="371.8 MB">Ultimate DVD</a>
+</div>

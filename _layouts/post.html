@@ -26,15 +26,6 @@ layout: default
       </figure>
     {% endif %}
     {{ content }}
-    {% if page.downloads %}
-      <h2>Download</h2>
-      <div class="download">
-        {% for download in page.downloads %}
-          <a class="download-button" href="{{ download.link }}" data-filesize="{{ download.size }}">{{ download.name }}</a>
-        {% endfor %}
-      </div>
-    {% else %}
-    {% endif %}
   </div>
 
   {% if site.disqus.shortname %}
@@ -46,7 +37,7 @@ layout: default
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
           var disqus_shortname = 'theproducoes'; // required: replace example with your forum shortname
           // var disqus_developer = 1; // Comment out when the site is live
-          var disqus_identifier = "{{ page.url }}";
+          var disqus_identifier = "{{ page.url | absolute_url }}";
 
           /* * * DON'T EDIT BELOW THIS LINE * * */
           (function() {

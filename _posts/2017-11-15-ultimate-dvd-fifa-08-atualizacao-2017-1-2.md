@@ -3,13 +3,6 @@ layout: post
 comments: true
 title: "Ultimate DVD FIFA 08 + Atualização 2017.1.2"
 video_id: B7NnQk6mHzw
-downloads:
-  - name: Atualização 17.1.2 by THE
-    link: https://goo.gl/RkzHk6
-    size: 514.3 MB
-  - name: Ultimate DVD
-    link: https://goo.gl/WL9qPo
-    size: 371.8 MB
 date: 2017-11-15 07:20:49 -0200
 categories: Atualizações
 ---
@@ -33,3 +26,9 @@ Siga a ordem de instalação:
 4º Deletar a pasta FIFA 08 que se encontra na pasta Documentos  
 
 Se você já tem o ultimate dvd e a atualização anterior instalados, instale a 17.1.2 por cima e apague a pasta fifa 08 em documentos
+
+<h2>Download</h2>
+<div class="download">
+  <a class="download-button" href="https://goo.gl/RkzHk6" data-filesize="514.3 MB">Atualização 17.1.2 by THE</a>
+  <a class="download-button" href="https://goo.gl/WL9qPo" data-filesize="371.8 MB">Ultimate DVD</a>
+</div>

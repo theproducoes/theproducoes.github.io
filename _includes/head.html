@@ -12,7 +12,7 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <style type="text/css">
-    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 * {
   margin: 0;
   padding: 0;
@@ -233,7 +233,7 @@ article .post-header .post-title {
 article .post-header .post-meta {
   color: #999; }
 article .post-content {
-  margin: 0 0 20px 0; }
+  margin: 0 0 0px 0; }
   article .post-content figure {
     display: block;
     text-align: center;
@@ -251,6 +251,9 @@ article .post-content {
     line-height: 27px;
     color: #484848;
     margin: 0 0 15px 0; }
+  article .post-content h2 {
+    color: #218C74;
+    margin-bottom: 12px; }
   article .post-content ul {
     font-size: 18px;
     padding: 0 0 0 25px;
@@ -392,6 +395,9 @@ footer {
 
   article .post-content figure iframe {
     height: 200px; } }
+.download {
+  margin-bottom: 15px; }
+
 /**
  * Download button
  * 1. Make the button a block level element while giving the ability to put several of them on the same line
@@ -409,8 +415,9 @@ footer {
   /* 1 */
   margin-right: 10px;
   /* 2 */
-  margin-top: 15px;
+  margin-top: 5px;
   /* 3 */
+  margin-bottom: 5px;
   padding: 30px 30px 30px 80px;
   /* 4 */
   color: #686868;

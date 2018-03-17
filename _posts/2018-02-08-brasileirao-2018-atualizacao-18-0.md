@@ -3,10 +3,6 @@ layout: post
 comments: true
 title: "Brasileirão 2018 - Atualização 18.0"
 image: "posts/2018/02/brasileirao-2018-atualizacao-18-0.jpg"
-downloads:
-  - name: Atualização 18.0 by THE
-    link: https://goo.gl/P3RCUY
-    size: 741.3 MB
 date: 2018-02-08 15:23:21 -0200
 categories: Atualizações
 ---
@@ -27,3 +23,8 @@ Siga a ordem de instalação:
 5º Regenerar usando Fat Master  
 
 Se você tem a atualização 17.1.4 instalada, instale a 18.0 por cima, apague a pasta fifa 08 em documentos e regenere usando o fat master  
+
+<h2>Download</h2>
+<div class="download">
+  <a class="download-button" href="https://goo.gl/P3RCUY" data-filesize="741.3 MB">Atualização 18.0 by THE</a>
+</div>
