@@ -265,6 +265,18 @@ main {
 					.card-content.fb-page {
 						text-align: center;
 					}
+					.card-content.partners {
+						padding: 5px;
+						.partner-banner {
+							display: flex;
+							justify-content: center;
+							flex-flow: row wrap;
+							a {
+								flex: 0 1 160px;
+								margin: 5px 5px 0px 5px;
+							}
+						}
+					}
 					.card-content.news {
 						#feed2 {
 							div {
@@ -324,11 +336,13 @@ article {
 			font-size: 18px;
 			padding: 0 0 0 25px;
 			margin: 0 0 15px 0;
+			color: #484848;
 		}
 		ol {
 			font-size: 18px;
 			padding: 0 0 0 25px;
 			margin: 0 0 15px 0;
+			color: #484848;
 		}
 	}
 }
@@ -422,7 +436,7 @@ footer {
 					flex: none;
 				    display: flex;
 				    width: 780px;
-				    height: 1300px;
+				    height: 1400px;
 				    flex-direction: column;
 				    flex-flow: column wrap;
 				    align-items: center;
