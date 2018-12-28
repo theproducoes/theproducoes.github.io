@@ -28,6 +28,19 @@
           <div class="column-right" id="column-right" data-turbolinks-permanent>
             <div class="card">
               <div class="card-title">
+                <h3>Na próxima atualização</h3>
+              </div>
+              <div class="card-content next-updates">
+                  {% for update in site.data.updates limit:5 %}
+                    <p>{{ update.name }}</p>
+                  {% endfor %}
+                  <div class="button">
+                    <a href="{{ "/na-proxima-atualizacao/" | relative_url }}">Ver mais »</a>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">
                 <h3>Elencos Atualizados</h3>
               </div>
               <div class="card-subtitle">
@@ -36,7 +49,7 @@
               <div class="card-content teams">
                   <img src="{{ "/assets/img/escudos/AmericaMG-65.png" | relative_url }}" alt="América-MG" title="América-MG">
                   <img src="{{ "/assets/img/escudos/atletico_mg_60x60.png" | relative_url }}" alt="Atlético-MG" title="Atlético-MG">
-                  <img src="{{ "/assets/img/escudos/atletico-pr_2015_65.png" | relative_url }}" alt="Atlético-PR" title="Atlético-PR">
+                  <img src="{{ "/assets/img/escudos/athletico-pr_65.png" | relative_url }}" alt="Athletico-PR" title="Athletico-PR">
                   <img src="{{ "/assets/img/escudos/bahia_60x60.png" | relative_url }}" alt="Bahia" title="Bahia">
                   <img src="{{ "/assets/img/escudos/botafogo_60x60.png" | relative_url }}" alt="Botafogo" title="Botafogo">
                   <img src="{{ "/assets/img/escudos/ceara_60x60.png" | relative_url }}" alt="Ceará" title="Ceará">
