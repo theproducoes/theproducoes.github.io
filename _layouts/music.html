@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main>
+
+    </main>
+
+    {% include footer.html %}
+  <script>
+      ga('send', {
+        hitType: 'pageview',
+        title: document.title,
+        location: location.href.split('#')[0],
+        page: location.pathname,
+        transport: 'beacon',
+      });
+  </script>
+  </body>
+
+</html>
