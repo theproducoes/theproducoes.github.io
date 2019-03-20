@@ -33,8 +33,8 @@ Copa da Uefa no modo Torneio
 \- Novos times no modo dirigente, Japoneses, Russos, Representantes dos Estadios que não tem Estaduais  
 
 \- Patrocinadores e tecnicos reais  
-\- Chuteiras oficiais da nike, addidas, puma, etc  
-\- Bolas oficiais da nike, addidas, puma, etc  
+\- Chuteiras oficiais da nike, adidas, puma, etc  
+\- Bolas oficiais da nike, adidas, puma, etc  
 \- Logo da globo nos replays  
 
 \- Placas de publicidade reais  
