@@ -11,4 +11,4 @@ permalink: /trabalhos-recentes/
 {% endfor %}
 </ul>
 
-Estas são algumas das novidades que estarão presentes em futuras atualizações.
+Estas são algumas das novidades que estarão presentes nas próximas atualizações.
