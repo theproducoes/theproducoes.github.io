@@ -31,7 +31,7 @@ plugins:
 
 permalink: "/:year/:month/:title/"
 
-paginate: 8
+paginate: 7
 
 paginate_path: "/page/:num/"
 
