@@ -26,24 +26,6 @@
             {{ content }}
           </div>
           <div class="column-right" id="column-right" data-turbolinks-permanent>
-            <!--<div class="card">
-              <div class="card-title">
-                <h3>Na próxima atualização</h3>
-              </div>
-              <div class="card-content next-updates">
-                {% for update in site.data.updates limit:5 %}
-                  <ul>
-                    <li>{{ update.name }}</li>
-                  </ul>
-                  {% assign update_counter = update_counter | plus:1 %}
-                {% endfor %}
-                {% if update_counter > 5 %}
-                  <div class="button">
-                    <a href="{{ "/na-proxima-atualizacao/" | relative_url }}">Ver mais »</a>
-                  </div>
-                {% endif %}
-              </div>
-            </div>-->
             <div class="card">
               <div class="card-title">
                 <h3>Elencos Atualizados</h3>
@@ -117,6 +99,24 @@
                   fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
                 <div class="fb-page" data-href="https://www.facebook.com/theproducoes" data-tabs="timeline" data-width="900px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theproducoes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/theproducoes">The Produções</a></blockquote></div>
+              </div>
+            </div>
+                        <div class="card">
+              <div class="card-title">
+                <h3>Trabalhos recentes</h3>
+              </div>
+              <div class="card-content next-updates">
+                <ul>
+                {% for update in site.data.updates limit:5 %}
+                  <li>{{ update.name }}</li>
+                  {% assign update_counter = update_counter | plus:1 %}
+                {% endfor %}
+                </ul>
+                {% if update_counter > 4 %}
+                  <div class="button">
+                    <a href="{{ "/trabalhos-recentes/" | relative_url }}">Ver mais »</a>
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
