@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
 
   <link rel="stylesheet" href="{{ "/assets/main.css?=v2" | relative_url }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{ "/assets/js/jquery.simpleLoadMore.min.js" | relative_url }}"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <style type="text/css">
@@ -82,6 +84,23 @@
   }
   google.setOnLoadCallback(initialize);
 
+  </script>
+
+  <script type="text/javascript">
+  $( document ).ready(function() {
+    $('.some-list').simpleLoadMore({
+      item: 'div',
+      count: 24,
+      btnHTML: '<div class="load-more"><a href="#" class="load-more__btn">Ver mais <i class="fas fa-angle-down"></i></a></div>'
+    });
+  });
+  $(document).on('page:change', function(event) {
+    $('.some-list').simpleLoadMore({
+      item: 'div',
+      count: 24,
+      btnHTML: '<div class="load-more"><a href="#" class="load-more__btn">Ver mais <i class="fas fa-angle-down"></i></a></div>'
+    });
+  });
   </script>
   
   {% if jekyll.environment == 'production' and site.google_analytics %}

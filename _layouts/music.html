@@ -13,11 +13,12 @@
 
     {% include footer.html %}
   <script>
+
       ga('send', {
         hitType: 'pageview',
         title: document.title,
         location: location.href.split('#')[0],
-        page: location.pathname,
+        page: location.href.split('/').pop(),
         transport: 'beacon',
       });
   </script>
