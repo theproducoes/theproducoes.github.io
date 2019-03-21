@@ -1,7 +1,7 @@
 ---
 layout: music
 title: Play
-permalink: /play/
+permalink: /play
 ---
 
 <script type="text/javascript">
