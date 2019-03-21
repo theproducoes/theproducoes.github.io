@@ -20,7 +20,7 @@ permalink: /musicas/
 		  {% assign update_counter = update_counter | plus:1 %}
 		{% endfor %}
 	</div>
-	<div>
+	<div class="video-category">
 		<h2>Músicas da atualização 18.2</h2>
 	</div>
 	<div class="videos">
@@ -38,7 +38,7 @@ permalink: /musicas/
 		  {% assign update_counter = update_counter | plus:1 %}
 		{% endfor %}
 	</div>
-	<div>
+	<div class="video-category">
 		<h2>Músicas da atualização 18.1</h2>
 	</div>
 	<div class="videos">
