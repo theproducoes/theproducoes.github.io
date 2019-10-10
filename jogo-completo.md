@@ -1,8 +1,8 @@
 ---
 layout: page
 comments: true
-title: Jogo completo + Atualização 19.0.5
-image: "posts/2019/09/atualizacao-19-0-5.jpg"
+title: Jogo completo + Atualização 19.0.6
+image: "posts/2019/atualizacao-19-0-6.jpg"
 permalink: /jogo-completo/
 ---
 
@@ -27,13 +27,13 @@ Baixe todas as partes na mesma pasta. <i>(Mesmo que você já tenha o jogo baixa
   <a class="download-button" href="http://bit.ly/2Afb4lS" data-filesize="1.11 MB">Parte 13</a>
   <a class="download-button" href="http://bit.ly/2EL0Ywd" data-filesize="1.71 MB">Parte 14</a>
 </div>
-<h2>2º - Baixe a atualização 19.0.5</h2>
+<h2>2º - Baixe a atualização 19.0.6</h2>
 <div class="download">
-  <a class="download-button" href="http://bit.ly/2ngMldv" data-filesize="177.25 MB">Atualização 19.0.5 by THE.exe</a>
+  <a class="download-button" href="http://bit.ly/2IFo3lb" data-filesize="177.2 MB">Atualização 19.0.6 by THE.exe</a>
 </div>
 <h2>3º - Instale e atualize o jogo</h2>
 Abra o arquivo install para instalar o jogo.  
-Após terminar de instalar o jogo, abra o arquivo Atualização 19.0.5 by THE para instalar a atualização.  
+Após terminar de instalar o jogo, abra o arquivo Atualização 19.0.6 by THE para instalar a atualização.  
 Quando a instalação for concluída, caso exista, exclua a pasta FIFA 08 em Documentos.  
 Em seguida você pode abrir o jogo pelo ícone na área de trabalho.  
 
