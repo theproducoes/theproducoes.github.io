@@ -17,7 +17,7 @@ permalink: /jogo-completo/
     <div class="panel-content">
             <h2>Download em arquivo único</h2>
 <div class="download">
-  <a class="download-button" href="http://bit.ly/2QEoqRG" data-filesize="2.64 GB">
+  <a class="download-button" href="http://bit.ly/2QEoqRG" onclick="captureOutboundLink('http://bit.ly/2QEoqRG'); return false;" data-filesize="2.64 GB">
 Patch THE Produções 20.0.zip</a>
 </div>
 
@@ -69,7 +69,7 @@ Em seguida você pode abrir o jogo pelo ícone na área de trabalho.
     <div class="panel-content">
                   <h2>Download</h2>
 <div class="download">
-  <a class="download-button" href="https://bit.ly/2LPcvwN" data-filesize="1.24 GB">
+  <a class="download-button" href="https://bit.ly/2LPcvwN" onclick="captureOutboundLink('https://bit.ly/2LPcvwN'); return false;" data-filesize="1.24 GB">
 Patch THE Produções 20.0.zip</a>
 </div>
 
