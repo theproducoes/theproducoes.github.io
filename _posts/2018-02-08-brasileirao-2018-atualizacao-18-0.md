@@ -4,7 +4,7 @@ comments: true
 title: "Brasileirão 2018 - Atualização 18.0"
 image: "posts/2018/02/brasileirao-2018-atualizacao-18-0.jpg"
 date: 2018-02-08 15:23:21 -0200
-categories: Atualizações
+tags: Atualizações
 ---
 
 Brasileirão 2018 - Atualização 18.0 by THE

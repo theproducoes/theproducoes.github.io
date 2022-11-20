@@ -22,7 +22,7 @@ permalink: /perguntas-frequentes/
     <input id="q2" type="checkbox" class="panel">
     <label for="q2" class="panel-title"><div class="plus">></div>
     Qual é a atualização mais recente?</label>
-    <div class="panel-content">{% for post in site.categories['Atualizações'] limit:1 %}
+    <div class="panel-content">{% for post in site.tags['Atualizações'] limit:1 %}
             A mais recente é a {{ post.title }}. Caso não tenha, <a href="{{ post.url | relative_url }}">clique aqui</a> e saiba como baixar e instalar.
           {% endfor %}</div>
   </div>

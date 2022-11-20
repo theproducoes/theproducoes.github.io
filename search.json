@@ -1,0 +1,21 @@
+---
+---
+[
+  {% for post in site.posts %}
+  {% if post.coming_soon != true %}
+    {
+      "title"    : "{{ post.title }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "tag"      : "{{ site.baseurl }}{{ post.tags }}",
+      {% if post.video_id != null %}
+      "image"    : "{{ "https://img.youtube.com/vi/" }}{{ post.video_id }}{{ "/mqdefault.jpg" }}",
+      {% else %}
+      "image"    : "{{ site.url }}{{ "/assets/img/" }}{{ post.image }}",
+      {% endif %}
+      {% assign date_format = site.minima.date_format | default: "%d/%m/%Y" %}
+      "date"     : "{{ post.date | date: date_format }}",
+      "description" : "{{ post.description | strip_html | strip_newlines | escape }}"
+    } {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]

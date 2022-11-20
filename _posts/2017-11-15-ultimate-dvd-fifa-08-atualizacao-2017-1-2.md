@@ -4,7 +4,7 @@ comments: true
 title: "Ultimate DVD FIFA 08 + Atualização 2017.1.2"
 video_id: B7NnQk6mHzw
 date: 2017-11-15 07:20:49 -0200
-categories: Atualizações
+tags: Atualizações
 ---
 
 Ultimate DVD FIFA 08 + Atualização 2017.1.2

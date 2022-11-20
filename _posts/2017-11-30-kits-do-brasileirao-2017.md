@@ -4,7 +4,7 @@ comments: true
 title: "Kits do Brasileirão 2017"
 image: "posts/2017/11/kits-do-brasileirao-2017.jpg"
 date: 2017-11-30 15:35:26 -0200
-categories: Kits
+tags: Kits
 ---
 
 Se você já tem instalado o ultimate dvd e alguma de nossas atualizações, instale os kits do brasileirão por cima e regenere usando o fat master.

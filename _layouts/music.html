@@ -7,12 +7,41 @@
 
     {% include header.html %}
 
-    <main>
+    <main class="videosBackColor">
       {{ content }}
     </main>
 
     {% include footer.html %}
-  <script>
+  <script src="{{ "/assets/js/lazyload.js?ver=1.0.0" | relative_url }}"></script>
+  <!-- Script pointing to search-script.js -->
+  <script src="{{ "/assets/js/simple-jekyll-search.js" | relative_url }}"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js
+"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#lightgallery").lightGallery(); 
+    });
+  </script>
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
+  <script type="text/javascript">
+  $(document).ready(function(){ 
+      $(window).scroll(function(){ 
+          if ($(this).scrollTop() > 100) { 
+              $('#scroll').fadeIn(); 
+          } else { 
+              $('#scroll').fadeOut(); 
+          } 
+      }); 
+      $('#scroll').click(function(){ 
+          $("html, body").animate({ scrollTop: 0 }, 600); 
+          return false; 
+      }); 
+  });
+  </script>
+  <!--<script>
 
       ga('send', {
         hitType: 'pageview',
@@ -21,6 +50,15 @@
         page: location.href.split('/').pop(),
         transport: 'beacon',
       });
+  </script>-->
+  <script defer src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js" data-turbolinks-eval=false></script>
+  <script>
+  window.addEventListener('load', () => {
+    quicklink.listen();
+  });
+  party.confetti(runButton, {
+    count: party.variation.range(20, 40),
+  });
   </script>
   </body>
 

@@ -4,7 +4,7 @@ comments: true
 title: "Creation Master 08"
 image: "posts/2017/12/creation-master-08.jpg"
 date: 2017-12-08 14:15:13 -0200
-categories: Ferramentas
+tags: Ferramentas
 ---
 
 Este programa é o mestre na edição do FIFA 08! 

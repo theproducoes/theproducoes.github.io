@@ -1,0 +1,13 @@
+---
+layout: null
+---
+{% assign first = true %}[{% for post in site.posts %}{% if post.title != null and post.title != empty %}{% if post.coming_soon != true %}{% unless first %},{% endunless %}
+    {
+        "title": {{post.title | jsonify}},{% if post.video_id != null %}
+        "image": "{{ "https://img.youtube.com/vi/" }}{{ post.video_id }}{{ "/mqdefault.jpg" }}",{% else %}
+        "image": "{{ site.url }}{{ "/assets/img/" }}{{ post.image }}",{% endif %}
+        "content": "{% assign sortedcats = post.tags | sort %}{% for tag in sortedcats %}<em>{{tag}}</em>{% endfor %}",
+        "url": "{{ site.baseurl }}{{ post.url }}",{% assign date_format = site.minima.date_format | default: "%d/%m/%Y" %}
+        "date": "{{ post.date | date: date_format }}"
+    }{% assign first = false %}{% endif %}{% endif %}{% endfor %}
+]

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'pt-br' }}">
 
   {% include head.html %}
 
@@ -7,6 +7,16 @@
 
     {% include header.html %}
 
+    {% if page.layout != "home" %}
+
+    {% else %}
+    <div id="splide" class="splide" style="display:none;">
+      <div class="splide__track">
+        <ul class="splide__list">
+        </ul>
+      </div>
+    </div>
+    {% endif %}
     <main>
 
       {% if page.layout != "home" %}
@@ -17,6 +27,9 @@
           <div id="feed"></div>
         </div>
       </div>-->
+      <div class="container">
+        <div class="slide-items"></div>
+      </div>
       {% endif %}
 
       <div class="container">
@@ -25,7 +38,7 @@
           <div class="column-left">
             {{ content }}
           </div>
-          <div class="column-right" id="column-right" data-turbolinks-permanent>
+          <div class="column-right" id="column-right">
             <!--<div class="card">
               <div class="card-title">
                 <h3>Canais Recomendados</h3>
@@ -40,13 +53,85 @@
               <div id="feed4"></div>
             </div>-->
             <div class="card">
-              <div class="card-title">
-                <h3>Elencos Atualizados</h3>
+              <div class="card-content">
+                              <div id="ww_50cbfdb269e0c" v='1.20' loc='auto' a='{"t":"horizontal","lang":"pt","ids":[],"cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#F4F0E6","cl_thund":"#FF5722","sl_sot":"celsius","sl_ics":"one_a","font":"Arial"}'><a href="https://weatherwidget.org/pt/" id="ww_50cbfdb269e0c_u" target="_blank">Widget previsão do tempo para site</a> por Weatherwidget.org</div><script async src="https://srv2.weatherwidget.org/js/?id=ww_50cbfdb269e0c"></script>
               </div>
+            </div>
+            <div class="card">
+              <!--Dayspedia.com widget--><div class="DPAC" cityid="5785" lang="pt" id="dayspedia_widget_3960d8dac39b2a5b" host="https://dayspedia.com" nightsign="true" sun="false" auto="true" style="width: 100%; border-width: 0px; border-radius: 0px; background-image: none;">
+  <style media="screen" id="DPACstyles">
+        /*COMMON*/
+    .DPAC{display:table;position:relative;box-sizing:border-box;font-size:100.01%;font-style:normal;font-family:Arial;background-position:50% 50%;background-repeat:no-repeat;background-size:cover;overflow:hidden;user-select:none}
+    .DPACh,.DPACd{line-height:1.4}
+    .DPACh{margin-bottom:1em}
+    .DPACt{position:relative;border-radius:50%;line-height:1;border-style:solid}
+    .DPACt svg{display:block;position:absolute;top:0;right:0;bottom:0;left:0}
+    .DPACd{margin-top:1em}
+    .DPACdm::after{content:' '}
+    .DPACda::after{content:', '}
+    .DPACdt{margin-right:.48em}
+    .DPACtn{display:inline-block;position:relative;width:13px;height:13px;border:2px solid;border-radius:50%;overflow:hidden}
+    .DPACtn>i{display:block;content:'';position:absolute;right:33%;top:-5%;width:85%;height:85%;border-radius:50%}
+    .DPACs{margin:.96em 0 0 -3px;font-size:90%;line-height:1;white-space:nowrap}
+    .DPACs sup{padding-left:.24em;font-size:65%}
+    .DPACsl::before,.DPACsl::after{display:inline-block;opacity:.4}
+    .DPACsl::before{content:'~';margin:0 .12em}
+    .DPACsl::after{content:'~';margin:0 .24em}
+    .DPACs svg{display:inline-block;vertical-align:bottom;width:1.2em;height:1.2em;opacity:.48}
+    /*CUSTOM*/
+    
+    .DPAC{width:1%;padding:24px 24px 32px;background-color:#ffffff;border:1px solid #343434;border-radius:7px} /* widget width, padding, background, border, rounded corners */
+    .DPAC>div{text-align:center} /* initial text-align */
+    .DPACt{width:160px;height:160px;margin:0 auto;background-color:#ECEFF1;border-width:0} /* clock width, background, align */
+    .DPACtcf>path{fill:#343434} /* clock face digits color */
+    .DPACth>path,.DPACtm>path{fill:#343434} /* hour & minute hands color */
+    .DPACts>path{fill:#FF0051} /* second hand color */
+    .DPACh{color:#007DBF;font-weight:normal} /* headline color, font-weight*/
+    .DPACd{color:#343434;font-weight:bold} /* time & date color, font-weight */
+    .DPACtn{border-color:#343434} /* night-sign color = time & date color */
+    .DPACtn>i{background-color:#343434} /* night-sign color = time & date color */
+    .DPACh,.DPACd{font-size:16px} /* headline & date font-size */ </style>
+  <a class="DPl" href="https://dayspedia.com/time/br/Teresina/" target="_blank" style="display:block!important;text-decoration:none!important;border:none!important;cursor:pointer!important;background:transparent!important;line-height:0!important;text-shadow:none!important;position:absolute;z-index:1;top:0;right:0;bottom:0;left:0"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" style="position:absolute;right:8px;bottom:0;width:16px;height:16px"><path style="fill:/*defined*/#007DBF" d="M0,0v16h1.7c-0.1-0.2-0.1-0.3-0.1-0.5c0-0.9,0.8-1.6,1.6-1.6c0.9,0,1.6,0.8,1.6,1.6c0,0.2,0,0.3-0.1,0.5h1.8 c-0.1-0.2-0.1-0.3-0.1-0.5c0-0.9,0.8-1.6,1.6-1.6s1.6,0.8,1.6,1.6c0,0.2,0,0.3-0.1,0.5h1.8c-0.1-0.2-0.1-0.3-0.1-0.5 c0-0.9,0.8-1.6,1.6-1.6c0.9,0,1.6,0.8,1.6,1.6c0,0.2,0,0.3-0.1,0.5H16V0H0z M4.2,8H2V2h2.2c2.1,0,3.3,1.3,3.3,3S6.3,8,4.2,8z M11.4,6.3h-0.8V8H9V2h2.5c1.4,0,2.4,0.8,2.4,2.1C13.9,5.6,12.9,6.3,11.4,6.3z M4.4,3.5H3.7v3h0.7C5.4,6.5,6,6,6,5 C6,4.1,5.4,3.5,4.4,3.5z M11.3,3.4h-0.8V5h0.8c0.6,0,0.9-0.3,0.9-0.8C12.2,3.7,11.9,3.4,11.3,3.4z"></path></svg><span title="DaysPedia.com" style="position:absolute;right:28px;bottom:6px;height:10px;width:60px;overflow:hidden;text-align:right;font:normal 10px/10px Arial,sans-serif!important;color:/*defined*/#007DBF">Powered&nbsp;by DaysPedia.com</span></a> <div class="DPACh" style="text-align: center; margin-left: auto; margin-right: auto; font-weight: normal; font-size: 16px; display:none;">Horário Atual em Teresina</div>
+  <div class="DPACt" style="text-align: center; margin-left: auto; margin-right: auto; border-width: 0px; background: none rgb(236, 239, 241); width: 240px; height: 240px;"><svg class="DPACtcf" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 112 112"><path d="M53.1,18.6h-1.6v-7.7h-1.9v-1l3.5-0.7V18.6z"></path><path d="M61.8,18.6h-6.3v-1.1l3.1-3.4c0.5-0.6,0.9-1,1.1-1.4c0.2-0.3,0.3-0.7,0.3-1c0-0.4-0.1-0.8-0.4-1.1 c-0.2-0.3-0.6-0.4-1-0.4c-0.6,0-1,0.2-1.2,0.5C57,11,56.9,11.4,56.9,12h-1.6c0-0.9,0.3-1.6,0.9-2.2c0.6-0.6,1.4-0.9,2.4-0.9 c0.9,0,1.7,0.2,2.2,0.7c0.5,0.5,0.8,1.2,0.8,2c0,0.6-0.2,1.1-0.5,1.6c-0.3,0.5-0.8,1.1-1.4,1.8l-2.1,2.3h4.3V18.6z"></path><path d="M98.9,55.3h1.1c0.5,0,0.9-0.1,1.1-0.4c0.2-0.3,0.3-0.6,0.3-1.1c0-0.5-0.1-0.8-0.4-1.1 c-0.2-0.2-0.6-0.4-1.1-0.4c-0.4,0-0.8,0.1-1.1,0.4c-0.3,0.2-0.4,0.6-0.4,1h-1.6c0-0.8,0.3-1.4,0.8-1.9c0.6-0.5,1.3-0.7,2.2-0.7 c0.9,0,1.7,0.2,2.2,0.7c0.5,0.5,0.8,1.1,0.8,2c0,0.4-0.1,0.8-0.4,1.2c-0.2,0.4-0.6,0.7-1.1,0.9c0.6,0.2,1,0.5,1.2,0.9 c0.2,0.4,0.4,0.8,0.4,1.3c0,0.9-0.3,1.6-0.9,2.1c-0.6,0.5-1.4,0.7-2.3,0.7c-0.9,0-1.6-0.2-2.2-0.7c-0.6-0.5-0.9-1.1-0.9-2h1.6 c0,0.4,0.1,0.8,0.4,1c0.3,0.3,0.7,0.4,1.1,0.4c0.5,0,0.9-0.1,1.2-0.4c0.3-0.3,0.4-0.6,0.4-1.1c0-0.5-0.1-0.9-0.4-1.2 c-0.3-0.2-0.7-0.4-1.2-0.4h-1.1V55.3z"></path><path d="M12.1,59.6c0.6,0,1-0.2,1.4-0.6c0.3-0.4,0.5-1,0.5-1.9v-0.2l0,0c-0.2,0.3-0.5,0.5-0.8,0.6 c-0.3,0.1-0.6,0.2-1,0.2c-0.9,0-1.6-0.3-2.2-0.8c-0.5-0.6-0.8-1.4-0.8-2.4c0-1,0.3-1.8,0.9-2.4c0.6-0.6,1.3-0.9,2.2-0.9 c1,0,1.8,0.3,2.4,1c0.6,0.6,0.9,1.6,0.9,2.8v2.2c0,1.2-0.3,2.2-1,2.8c-0.6,0.7-1.5,1-2.5,1c-0.3,0-0.7,0-1-0.1 c-0.3-0.1-0.7-0.2-1-0.3l0.2-1.2c0.3,0.1,0.6,0.2,0.8,0.3C11.4,59.6,11.8,59.6,12.1,59.6z M12.4,56.5c0.4,0,0.7-0.1,1-0.2 c0.3-0.2,0.5-0.4,0.6-0.6v-1c0-0.8-0.1-1.3-0.4-1.7c-0.3-0.4-0.7-0.6-1.2-0.6c-0.4,0-0.8,0.2-1.1,0.6c-0.3,0.4-0.4,0.9-0.4,1.5 c0,0.6,0.1,1.1,0.4,1.5C11.5,56.4,11.9,56.5,12.4,56.5z"></path><path d="M18.7,40.9h-1.6v-7.7h-1.9v-1l3.5-0.7V40.9z"></path><path d="M27.4,37.2c0,1.3-0.3,2.2-0.8,2.8c-0.5,0.6-1.3,1-2.3,1c-1,0-1.7-0.3-2.3-1c-0.6-0.6-0.8-1.6-0.8-2.8v-2.2 c0-1.3,0.3-2.2,0.8-2.8c0.5-0.6,1.3-1,2.3-1c1,0,1.7,0.3,2.3,1c0.6,0.6,0.8,1.6,0.8,2.8V37.2z M25.8,34.8c0-0.8-0.1-1.4-0.4-1.7 c-0.3-0.4-0.6-0.6-1.1-0.6c-0.5,0-0.9,0.2-1.1,0.6c-0.3,0.4-0.4,0.9-0.4,1.7v2.6c0,0.8,0.1,1.4,0.4,1.8c0.3,0.4,0.6,0.6,1.2,0.6 c0.5,0,0.9-0.2,1.1-0.5s0.4-1,0.4-1.8V34.8z"></path><path d="M96.6,37.9h-6.3v-1.1l3.1-3.4c0.5-0.6,0.9-1,1.1-1.4c0.2-0.3,0.3-0.7,0.3-1c0-0.4-0.1-0.8-0.4-1.1 c-0.2-0.3-0.6-0.4-1-0.4c-0.6,0-1,0.2-1.2,0.5c-0.3,0.3-0.4,0.7-0.4,1.3h-1.6c0-0.9,0.3-1.6,0.9-2.2c0.6-0.6,1.4-0.9,2.4-0.9 c0.9,0,1.7,0.2,2.2,0.7c0.5,0.5,0.8,1.2,0.8,2c0,0.6-0.2,1.1-0.5,1.6c-0.3,0.5-0.8,1.1-1.4,1.8l-2.1,2.3h4.3V37.9z"></path><path d="M21.8,76.2c0,0.5-0.1,0.9-0.4,1.3c-0.3,0.4-0.6,0.6-1.1,0.8c0.5,0.2,0.9,0.5,1.2,0.9c0.3,0.4,0.5,0.9,0.5,1.4 c0,0.9-0.3,1.6-0.9,2s-1.3,0.7-2.3,0.7c-1,0-1.7-0.2-2.3-0.7c-0.6-0.5-0.9-1.1-0.9-2c0-0.5,0.1-1,0.4-1.4c0.3-0.4,0.7-0.7,1.3-0.9 c-0.5-0.2-0.8-0.5-1.1-0.8c-0.3-0.4-0.4-0.8-0.4-1.3c0-0.9,0.3-1.5,0.8-2c0.5-0.5,1.2-0.7,2.1-0.7c0.9,0,1.6,0.2,2.1,0.7 C21.5,74.7,21.8,75.4,21.8,76.2z M20.4,80.6c0-0.5-0.1-0.9-0.4-1.1c-0.3-0.3-0.7-0.4-1.1-0.4c-0.5,0-0.9,0.1-1.1,0.4 c-0.3,0.3-0.4,0.7-0.4,1.1c0,0.5,0.1,0.9,0.4,1.1c0.3,0.3,0.7,0.4,1.2,0.4c0.5,0,0.9-0.1,1.1-0.4S20.4,81,20.4,80.6z M20.2,76.3 c0-0.4-0.1-0.8-0.4-1c-0.2-0.3-0.6-0.4-1-0.4c-0.4,0-0.7,0.1-1,0.4c-0.2,0.3-0.4,0.6-0.4,1c0,0.4,0.1,0.8,0.4,1 c0.2,0.3,0.6,0.4,1,0.4c0.4,0,0.7-0.1,1-0.4C20.1,77.1,20.2,76.7,20.2,76.3z"></path><path d="M95.6,78.5h1.2v1.3h-1.2v2.1h-1.6v-2.1H90l0-1l4.1-6.4h1.6V78.5z M91.5,78.5h2.6v-3.9l0,0l-0.1,0.3L91.5,78.5 z"></path><path d="M37.7,88.6c-1.1,1.3-1.9,2.5-2.2,3.5c-0.4,1-0.6,2.3-0.8,3.8l-0.1,1H33l0.1-1c0.2-1.5,0.5-2.8,1-3.9 c0.5-1.1,1.2-2.3,2.1-3.3h-5v-1.3h6.6V88.6z"></path><path d="M34,24.6h-1.6v-7.7h-1.9v-1l3.5-0.7V24.6z"></path><path d="M40.1,24.6h-1.6v-7.7h-1.9v-1l3.5-0.7V24.6z"></path><path d="M79.3,24.6h-1.6v-7.7h-1.9v-1l3.5-0.7V24.6z"></path><path d="M76,92.5l0.5-5.3h5v1.4h-3.7L77.6,91c0.2-0.1,0.4-0.3,0.6-0.3c0.2-0.1,0.5-0.1,0.8-0.1c0.9,0,1.6,0.3,2.1,0.8 c0.5,0.6,0.7,1.4,0.7,2.4c0,0.9-0.3,1.7-0.8,2.3c-0.5,0.6-1.3,0.9-2.3,0.9c-0.9,0-1.6-0.2-2.1-0.7s-0.9-1.1-0.9-2l1.5-0.1 c0,0.5,0.1,0.8,0.4,1.1c0.3,0.3,0.6,0.4,1.1,0.4c0.5,0,0.9-0.2,1.1-0.5c0.3-0.3,0.4-0.8,0.4-1.4c0-0.6-0.1-1.1-0.4-1.4 c-0.3-0.4-0.6-0.5-1.1-0.5c-0.4,0-0.8,0.1-1,0.2c-0.2,0.1-0.4,0.3-0.5,0.6L76,92.5z"></path><path d="M56.4,93.3c0.3,0,0.7,0,1,0.1c0.3,0.1,0.6,0.2,0.8,0.3l-0.3,1.2c-0.2-0.1-0.5-0.2-0.7-0.2 c-0.2-0.1-0.5-0.1-0.8-0.1c-0.6,0-1.2,0.2-1.5,0.7c-0.4,0.5-0.6,1.1-0.6,2v0c0.3-0.2,0.6-0.4,0.9-0.6c0.3-0.1,0.7-0.2,1.1-0.2 c0.9,0,1.5,0.3,2,0.9c0.5,0.6,0.7,1.3,0.7,2.3c0,1-0.3,1.8-0.8,2.4c-0.6,0.6-1.3,0.9-2.2,0.9c-1,0-1.8-0.3-2.4-1 c-0.6-0.7-0.9-1.6-0.9-2.9v-1.8c0-1.3,0.3-2.3,1-3S55.3,93.3,56.4,93.3z M56,97.8c-0.4,0-0.7,0.1-1,0.2c-0.3,0.1-0.5,0.3-0.6,0.6 v0.7c0,0.8,0.2,1.4,0.5,1.9c0.3,0.4,0.7,0.6,1.3,0.6c0.5,0,0.8-0.2,1.1-0.6c0.3-0.4,0.4-0.9,0.4-1.5c0-0.6-0.1-1-0.4-1.4 S56.5,97.8,56,97.8z"></path><path d="M57.5,107.6c0,0.8-0.7,1.5-1.5,1.5s-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5S57.5,106.8,57.5,107.6z M4.5,54.5 C3.7,54.5,3,55.2,3,56s0.7,1.5,1.5,1.5S6,56.8,6,56S5.3,54.5,4.5,54.5z M11,80.5c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5 s1.5-0.7,1.5-1.5S11.8,80.5,11,80.5z M101,80.5c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S101.8,80.5,101,80.5z M30,99c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S30.8,99,30,99z M83,99c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5 s1.5-0.7,1.5-1.5S83.8,99,83,99z M107.5,54.5c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S108.3,54.5,107.5,54.5z M56,6 c-0.8,0-1.5-0.7-1.5-1.5S55.2,3,56,3s1.5,0.7,1.5,1.5S56.8,6,56,6z M12.5,30.1c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5 s0.7,1.5,1.5,1.5S12.5,31,12.5,30.1z M102.5,30.1c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5S102.5,31,102.5,30.1z M31.5,11.6c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5S31.5,12.5,31.5,11.6z M84.5,11.6c0-0.8-0.7-1.5-1.5-1.5 s-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5S84.5,12.5,84.5,11.6z"></path></svg>
+    <svg class="DPACth" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 112 112" style="transform: rotate(114deg);"><path d="M56,33c0.6,0,1,0.4,1,1v22c0,0.6-0.4,1-1,1s-1-0.4-1-1V34C55,33.4,55.4,33,56,33 M56,31c-1.7,0-3,1.3-3,3v22 c0,1.7,1.3,3,3,3c1.7,0,3-1.3,3-3V34C59,32.3,57.7,31,56,31L56,31z"></path></svg>
+    <svg class="DPACtm" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 112 112" style="transform: rotate(292.3deg);"><path d="M57,52.1V23c0-0.6-0.4-1-1-1s-1,0.4-1,1v29.1c-1.7,0.4-3,2-3,3.9c0,2.2,1.8,4,4,4s4-1.8,4-4 C60,54.1,58.7,52.6,57,52.1z"></path></svg>
+    <svg class="DPACts" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 112 112" style="transform: rotate(258deg);"><path d="M58,56.5c0-0.8-0.5-1.6-1.2-1.9L56.1,7.5h-0.2l-0.6,47.1c-0.7,0.3-1.3,1-1.3,1.9c0,0.8,0.5,1.5,1.2,1.8L55,66.7 h2l-0.2-8.4C57.5,58,58,57.3,58,56.5z"></path></svg>
+  </div>
+  <div class="DPACd" style="text-align: center; margin-left: auto; margin-right: auto; font-size: 16px;">
+    <span class="DPACdt">seg, 3 de Outubro</span><span class="DPACtn" style="width: 14px; height: 14px;"><i></i></span>
+  </div>
+  
+  <div class="DPACs" style="text-align: center; margin-left: auto; margin-right: auto; font-size: 16px; display: none;">
+    <span class="DPACsr">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12,4L7.8,8.2l1.4,1.4c0,0,0.9-0.9,1.8-1.8V14h2c0,0,0-3.3,0-6.2l1.8,1.8l1.4-1.4L12,4z"></path><path d="M6.8,15.3L5,13.5l-1.4,1.4l1.8,1.8L6.8,15.3z M4,21H1v2h3V21z M20.5,14.9L19,13.5l-1.8,1.8l1.4,1.4L20.5,14.9z M20,21v2h3 v-2H20z M6.1,23C6,22.7,6,22.3,6,22c0-3.3,2.7-6,6-6s6,2.7,6,6c0,0.3,0,0.7-0.1,1H6.1z"></path></svg>05:35<sup style="display:none">am</sup>
+    </span>
+    <span class="DPACsl">12:10</span>
+    <span class="DPACss">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12,14L7.8,9.8l1.4-1.4c0,0,0.9,0.9,1.8,1.8V4h2c0,0,0,3.3,0,6.2l1.8-1.8l1.4,1.4L12,14z"></path><path d="M6.8,15.3L5,13.5l-1.4,1.4l1.8,1.8L6.8,15.3z M4,21H1v2h3V21z M20.5,14.9L19,13.5l-1.8,1.8l1.4,1.4L20.5,14.9z M20,21v2h3 v-2H20z M6.1,23C6,22.7,6,22.3,6,22c0-3.3,2.7-6,6-6s6,2.7,6,6c0,0.3,0,0.7-0.1,1H6.1z"></path></svg>17:44<sup style="display:none">pm</sup>
+    </span>
+  </div>
+  <script>
+    var s, t; s = document.createElement("script"); s.type = "text/javascript";
+    s.async = true;
+    s.src = "//cdn.dayspedia.com/js/dwidget.min.vbf5fce77.js";
+    t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+    s.onload = function() {
+      window.dwidget = new window.DigitClock();
+      window.dwidget.init("dayspedia_widget_3960d8dac39b2a5b");
+    };
+  </script>
+<!--/DPAC-->
+</div><!--Dayspedia.com widget ENDS-->
+            </div>
+            <div class="card">
+              <!--<div class="card-title">
+                <h3>Elencos Atualizados</h3>
+              </div>-->
+              <div id="scoreaxis-widget-29566" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/732?widgetRows=1%2C1%2C1%2C1%2C1%2C1%2C0%2C0%2C0%2C1&amp;widgetHomeAwayTabs=0&amp;links=0&amp;fontSize=18&amp;lang=pt&amp;font=6&amp;removeBorders=1&amp;header=1&amp;inst=29566" style="width:100%;height:743px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"29566"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-29566 iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
               <!--<div class="card-subtitle">
                 <h4>Brasileirão 2020</h4>
               </div>-->
-              <div class="card-content teams">
+              <!--<div class="card-content teams">
                   <img src="{{ "/assets/img/escudos/athletico-pr_65.png" | relative_url }}" alt="Athletico-PR" title="Athletico-PR">
                   <img src="{{ "/assets/img/escudos/Atletico-GO-65.png" | relative_url }}" alt="Atlético-GO" title="Atlético-GO">
                   <img src="{{ "/assets/img/escudos/atletico_mg_60x60.png" | relative_url }}" alt="Atlético-MG" title="Atlético-MG">
@@ -67,15 +152,15 @@
                   <img src="{{ "/assets/img/escudos/sao_paulo_60x60.png" | relative_url }}" alt="São Paulo" title="São Paulo">
                   <img src="{{ "/assets/img/escudos/sport65.png" | relative_url }}" alt="Sport" title="Sport">
                   <img src="{{ "/assets/img/escudos/Vasco-65.png" | relative_url }}" alt="Vasco" title="Vasco">
-              </div>
+              </div>-->
             </div>
-            <div class="card">
-              <div class="card-title">
-                <h3>Notícias</h3>
-              </div>
+            <!--<div class="card">
               <div class="card-content news">
                   <div id="feed2"></div>
               </div>
+            </div>-->
+            <div class="card">
+              <div id="scoreaxis-widget-d8f7b" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%"><iframe id="Iframe" src="https://www.scoreaxis.com/widget/league-top-players/732?autoHeight=1&amp;links=0&amp;playersNumber=10&amp;lang=pt&amp;font=6&amp;fontSize=16&amp;inst=d8f7b" style="width:100%;height:781px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"d8f7b"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-d8f7b iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
             </div>
             <!--<div class="card">
               <div class="card-title">
@@ -104,6 +189,10 @@
                     <a href="https://www.net-tv.biz">
                       <img src="{{ "/assets/img/parceiros/nettv.jpg" | relative_url }}" alt="Net TV" title="Net TV">
                     </a>
+                    <video width="320" height="240" controls autoplay muted>
+                      <source src="https://video.wixstatic.com/video/8d272a_d5e844d96f6b49409d08c0d11ca4398e/1080p/mp4/file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
                   </div>
               </div>
             </div>-->
@@ -125,31 +214,614 @@
                 {% endif %}
               </div>
             </div>-->
-            <div class="card">
+            <!--<div class="card fb-page">
               <div class="card-title">
                 <h3>Página no Facebook</h3>
               </div>
               <div class="card-content fb-page">
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.11';
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-page" data-href="https://www.facebook.com/theproducoes" data-tabs="timeline" data-width="900px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/theproducoes" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/theproducoes">The Produções</a></blockquote></div>
+                <iframe id="Iframefb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftheproducoes&tabs=timeline&width=355&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="width:100%;height:500px;border:none;transition:all 300ms ease"></iframe>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
 
       </div>
+      {% if page.layout != "home" %}
+
+      {% else %}
+      <!--<div class="live-video videosBackColor">
+        <div class="container">
+          <div id="video">
+            <div>
+              <div class="player">
+                <iframe src="https://www.youtube.com/embed/9viagPVlRcY?&amp;autoplay=1&amp;mute=1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" __idm_id__="9625601"></iframe>
+                <div class="live-chat">
+                  <iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v=9viagPVlRcY&amp;embed_domain=localhost"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+      <div class="lives videosBackColor">
+        <div class="container">
+          <div class="live-items">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="news-items">
+        </div>
+      </div>
+      <!--<div class="videos videosBackColor">
+        <div class="category">
+          <em>gameplays do patch no youtube</em>
+        </div>
+        <div class="container" id="random_youtube_videos">
+        </div>
+      </div>-->
+      <div class="banner" id="banner2">
+      </div>
+      <div class="videos videosBackColor" id="patch-musics" style="display:none;">
+        <div class="category">
+          <em>músicas do patch</em>
+        </div>
+        <div class="container" id="random_posts">
+        </div>
+        <span class="load-more"><a href="{{ "/musicas/" | relative_url }}" class="load-more__btn">Ver mais <i class="fas fa-angle-down"></i></a></span>
+      </div>
+      <div class="container news2">
+        <div class="news2-items">
+        </div>
+      </div>
+      <div class="container">
+        <div id="aiscore-free" style="display:none;"></div><style>body{margin:0}#aiscore-free{display:flex;justify-content:center;height:100vh}</style>
+      </div>
+      <div class="container">
+        <ul class="trends-items cloud">
+        </ul>
+      </div>
+      <!--<div class="banner">
+        <img src="{{ "/assets/img/banner3.jpg" | relative_url }}">
+      </div>-->
+      {% endif %}
+      <!--<div class="lightgallery">
+          <a href="http://127.0.0.1:4000/assets/img/posts/2019/atualizacao-20-0.jpg">
+              <img src="http://127.0.0.1:4000/assets/img/posts/2019/atualizacao-20-0.jpg" />
+          </a>
+      </div>
+      <div class="lightgallery">
+          <a href="http://127.0.0.1:4000/assets/img/posts/2019/atualizacao-20-0.jpg">
+              <img src="http://127.0.0.1:4000/assets/img/posts/2019/atualizacao-20-0.jpg" />
+          </a>
+          <a href="http://127.0.0.1:4000/assets/img/posts/2019/01/atualizacao-19-0-2.jpg">
+              <img src="http://127.0.0.1:4000/assets/img/posts/2019/01/atualizacao-19-0-2.jpg" />
+          </a>
+      </div>-->
 
     </main>
 
     {% include footer.html %}
+    <script type="text/javascript">
+      var script = document.createElement('script');
+       script.async = true;
+       script.src = "https://static.addtoany.com/menu/page.js";
+       document.getElementsByTagName('head')[0].appendChild(script);
+       a2a.init_all();
+    </script>
+    {% if page.layout != "home" %}
+
+    {% else %}
+    <script type="text/javascript">
+    $(function() {
+      function parseRSS(callback) {
+        //var ts = (new Date()).getTime().toString().slice(0,7);
+        if (getWithExpiry("the-ts-featured-slide") != null) {
+          var user = JSON.parse(localStorage.getItem("the-ts-featured-slide"));
+          var ts = user.expiry;
+        }else{
+          setWithExpiry("the-ts-featured-slide", 0, 0, 300000);
+          var user = JSON.parse(localStorage.getItem("the-ts-featured-slide"));
+          var ts = user.expiry;
+        }
+        $.ajax({
+          //url: 'https://feeds.buzzsprout.com/1367764.rss',
+          url: 'https://www.espn.com.br/rss?='+ts,
+          dataType: 'xml',
+          error: function(e) {
+                console.log("XML reading Failed: ", e);        
+          },
+          success: function(response) {
+            // Remove any existing elements in the container
+            // Find each <item> in the RSS feed
+            $(response).find("item").each(function() {
+              // Build a new element
+              var $build = $('<div class="slide-item slick-slide"></div>');
+              // Grab the variables from the RSS feed
+              var scc_title = $(this).find('title').text();
+              var scc_link = $(this).find('link').text();
+              var scc_description = $(this).find('description').text();
+              var scc_media = $(this).find('enclosure').attr('url');
+              //var scc_image = $(this).find('itunes\\:image').attr('href');
+              //var scc_image = $(this).find('image').text();
+              var scc_image = $(this).find('enclosure').attr('url');
+              if(scc_image != undefined && scc_link.includes("mma") != true && scc_link.includes("nfl") != true) {
+              // Append elements to the new element
+              $build.append('<a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img class="lazy-slide" style="-webkit-filter:brightness(90%);filter:brightness(90%);-ms-transition:.5s;transition:.5s;animation:zoom-in-zoom-out 20s ease infinite" src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"><figcaption>'+scc_title+'</figcaption><div class="bgblur" style="position:absolute;left:0;right:0;z-index:-1;background-image:url('+scc_image+');background-size:cover;width:100%;height:100%;-webkit-filter:blur(10px);animation:zoom-in-zoom-out-bgslide 20s ease infinite;-moz-filter:blur(10px);-o-filter:blur(10px);-ms-filter:blur(10px);filter:blur(10px)"></div></figure></a>');
+              // Append the new element to the container
+              $('.slide-items').append($build);
+              } else {
+                  //for unsold properties
+              }
+            });
+            $('.slide-items').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    arrows:true,
+                    autoplaySpeed: 10000,
+                    dots:true,
+                  });
+                  $('.slide-item').show();
+                  //console.log('Onload disparado');
+          }
+        });
+      }
+      //$('#btn').click(function()
+      $(document).ready(function () {
+          if (window.location.href == "{{ site.url }}/") {
+            parseRSS();
+          }
+        });
+      });
+      $(function() {
+        function parseRSS(callback) {
+          //var ts = (new Date()).getTime().toString().slice(0,6);
+          if (getWithExpiry("the-ts-tnt") != null) {
+            var user = JSON.parse(localStorage.getItem("the-ts-tnt"));
+            var ts = user.expiry;
+          }else{
+            setWithExpiry("the-ts-tnt", 0, 0, 7200000);
+            var user = JSON.parse(localStorage.getItem("the-ts-tnt"));
+            var ts = user.expiry;
+          }
+          $.ajax({
+            //url: 'https://feeds.buzzsprout.com/1367764.rss',
+            //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+            url: 'https://api.allorigins.win/raw?url=https://tntsports.com.br/rss/feed.xml?='+ts,
+            cache: true,
+            //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+            dataType: 'xml',
+            error: function(e) {
+                  console.log("XML reading Failed: ", e);        
+              $.ajax({
+                //url: 'https://feeds.buzzsprout.com/1367764.rss',
+                //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+                url: 'https://api.allorigins.win/raw?url=https://tntsports.com.br/rss/feed.xml?='+ts,
+                cache: true,
+                //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+                dataType: 'xml',
+                error: function(e) {
+                      console.log("XML reading Failed: ", e);        
+                },
+                success: function(response) {
+                  var user = JSON.parse(localStorage.getItem("the-ts-tnt-old"));
+                  var ts = user.expiry;
+                  // Remove any existing elements in the container
+                  $('.news-items').children().remove();
+                  // Find each <item> in the RSS feed
+                  $(response).find("item").slice(0,36).each(function() {
+                    // Build a new element
+                    var $build = $('<div class="news-item"></div>');
+                    // Grab the variables from the RSS feed
+                    var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                    var scc_link = $(this).find('link').text();
+                    var scc_date = $(this).find('pubDate').text();
+                    var scc_category = $(this).find('category').text();
+                    var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                    var scc_description = $(this).find('description').text();
+                    var scc_media = $(this).find('enclosure').attr('url');
+                    //var scc_image = $(this).find('itunes\\:image').attr('href');
+                    var scc_image = $(this).find('media\\:content').attr('url');
+                    if(scc_image != undefined) {
+                    // Append elements to the new element
+                    $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                    // Append the new element to the container
+                    $('.news-items').append($build);
+                    } else {
+                      //for unsold properties
+                    }
+                  });
+                  a2a.init_all();
+                }
+              });
+            },
+            success: function(response) {
+              // Remove any existing elements in the container
+              $('.news-items').children().remove();
+              // Find each <item> in the RSS feed
+              $(response).find("item").slice(0,36).each(function() {
+                // Build a new element
+                var $build = $('<div class="news-item"></div>');
+                // Grab the variables from the RSS feed
+                var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                var scc_link = $(this).find('link').text();
+                var scc_date = $(this).find('pubDate').text();
+                var scc_category = $(this).find('category').text();
+                var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                var scc_description = $(this).find('description').text();
+                var scc_media = $(this).find('enclosure').attr('url');
+                //var scc_image = $(this).find('itunes\\:image').attr('href');
+                var scc_image = $(this).find('media\\:content').attr('url');
+                if(scc_image != undefined) {
+                // Append elements to the new element
+                $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                // Append the new element to the container
+                $('.news-items').append($build);
+                } else {
+                  //for unsold properties
+                }
+              });
+              a2a.init_all();
+              const item = {
+                value: 0,
+                channel: 0,
+                expiry: ts,
+              }
+              localStorage.setItem("the-ts-tnt-old", JSON.stringify(item));
+            }
+          });
+        }
+        //$('#btn').click(function()
+        $(document).ready(function () {
+          if (window.location.href == "{{ site.url }}/") {
+            parseRSS();
+          }
+        });
+      });
+      $(function() {
+        function parseRSS(callback) {
+          //var ts = (new Date()).getTime().toString().slice(0,7);
+          if (getWithExpiry("the-ts-twitter") != null) {
+            var user = JSON.parse(localStorage.getItem("the-ts-twitter"));
+            var ts = user.expiry;
+          }else{
+            setWithExpiry("the-ts-twitter", 0, 0, 3300000);
+            var user = JSON.parse(localStorage.getItem("the-ts-twitter"));
+            var ts = user.expiry;
+          }
+          $.ajax({
+            //url: 'https://feeds.buzzsprout.com/1367764.rss',
+            //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+            //url: 'https://api.allorigins.win/raw?url=https://rsshub.app/twitter/trends/23424768?='+ts,
+            url: 'https://api.allorigins.win/raw?url=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+            cache: true,
+            //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+            dataType: 'xml',
+            error: function(e) {
+                  console.log("XML reading Failed: ", e);        
+              var user = JSON.parse(localStorage.getItem("the-ts-twitter-old"));
+              var ts = user.expiry;
+              $.ajax({
+                //url: 'https://feeds.buzzsprout.com/1367764.rss',
+                //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+                //url: 'https://api.allorigins.win/raw?url=https://rsshub.app/twitter/trends/23424768?='+ts,
+                url: 'https://api.allorigins.win/raw?url=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+                cache: true,
+                //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+                dataType: 'xml',
+                error: function(e) {
+                      console.log("XML reading Failed: ", e);        
+                },
+                success: function(response) {
+                  // Remove any existing elements in the container
+                  $('.trends-items').children().remove();
+                  $('.trends-items').append('<div class="category"><em>assuntos do momento - Twitter Brasil</em></div>');
+                  // Find each <item> in the RSS feed
+                  $(response).find("item").slice(0,51).each(function() {
+                    // Build a new element
+                    var $build = $('<li></li>');
+                    // Grab the variables from the RSS feed
+                    var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                    var scc_link = $(this).find('link').text();
+                    var scc_date = $(this).find('pubDate').text();
+                    var scc_category = $(this).find('category').text();
+                    var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                    var scc_description = $(this).find('description').text();
+                    var scc_media = $(this).find('enclosure').attr('url');
+                    //var scc_image = $(this).find('itunes\\:image').attr('href');
+                    var scc_image = $(this).find('media\\:content').attr('url');
+                    // Append elements to the new element
+                    $build.append('<a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a>');
+                    // Append the new element to the container
+                    $('.trends-items').append($build);
+                  });
+                }
+              });
+            },
+            success: function(response) {
+              // Remove any existing elements in the container
+              $('.trends-items').children().remove();
+              $('.trends-items').append('<div class="category"><em>assuntos do momento - Twitter Brasil</em></div>');
+              // Find each <item> in the RSS feed
+              $(response).find("item").slice(0,51).each(function() {
+                // Build a new element
+                var $build = $('<li></li>');
+                // Grab the variables from the RSS feed
+                var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                var scc_link = $(this).find('link').text();
+                var scc_date = $(this).find('pubDate').text();
+                var scc_category = $(this).find('category').text();
+                var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                var scc_description = $(this).find('description').text();
+                var scc_media = $(this).find('enclosure').attr('url');
+                //var scc_image = $(this).find('itunes\\:image').attr('href');
+                var scc_image = $(this).find('media\\:content').attr('url');
+                // Append elements to the new element
+                $build.append('<a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a>');
+                // Append the new element to the container
+                $('.trends-items').append($build);
+              });
+              const item = {
+                value: 0,
+                channel: 0,
+                expiry: ts,
+              }
+              localStorage.setItem("the-ts-twitter-old", JSON.stringify(item));
+            }
+          });
+        }
+        //$('#btn').click(function()
+        $(document).ready(function () {
+          if (window.location.href == "{{ site.url }}/") {
+            parseRSS();
+          }
+        });
+      });
+      $(function() {
+        function parseRSS(callback) {
+          //var ts = (new Date()).getTime().toString().slice(0,6);
+          if (getWithExpiry("the-ts-google") != null) {
+            var user = JSON.parse(localStorage.getItem("the-ts-google"));
+            var ts = user.expiry;
+          }else{
+            setWithExpiry("the-ts-google", 0, 0, 7200000);
+            var user = JSON.parse(localStorage.getItem("the-ts-google"));
+            var ts = user.expiry;
+          }
+          $.ajax({
+            //url: 'https://feeds.buzzsprout.com/1367764.rss',
+            //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+            url: 'https://api.allorigins.win/raw?url=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
+            cache: true,
+            //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+            dataType: 'xml',
+            error: function(e) {
+                  console.log("XML reading Failed: ", e);        
+              var user = JSON.parse(localStorage.getItem("the-ts-google-old"));
+              var ts = user.expiry;
+              $.ajax({
+                //url: 'https://feeds.buzzsprout.com/1367764.rss',
+                //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+                url: 'https://api.allorigins.win/raw?url=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
+                cache: true,
+                //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+                dataType: 'xml',
+                error: function(e) {
+                      console.log("XML reading Failed: ", e);        
+                },
+                success: function(response) {
+                  // Remove any existing elements in the container
+                  $('.news2-items').children().remove();
+                  //$('.news2').prepend('<div class="category"><em>últimas</em></div>');
+                  // Find each <item> in the RSS feed
+                  $(response).find("item").slice(0,63).each(function() {
+                    // Build a new element
+                    var $build = $('<div class="news2-item"></div>');
+                    // Grab the variables from the RSS feed
+                    var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                    var scc_titleReplaced = scc_title.lastIndexOf('-');
+                    var scc_link = $(this).find('link').text();
+                    var scc_date = $(this).find('pubDate').text();
+                    //var scc_category = $(this).find('category').text();
+                    var scc_category = $(this).find('source').text();
+                    var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                    var scc_description = $(this).find('description').text();
+                    var scc_media = $(this).find('enclosure').attr('url');
+                    //var scc_image = $(this).find('itunes\\:image').attr('href');
+                    var scc_image = $(this).find('media\\:content').attr('url');
+                    // Append elements to the new element
+                    $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title.slice(0,scc_titleReplaced)+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                    // Append the new element to the container
+                    $('.news2-items').append($build);
+                  });
+                  a2a.init_all();
+                }
+              });
+            },
+            success: function(response) {
+              // Remove any existing elements in the container
+              $('.news2-items').children().remove();
+              //$('.news2').prepend('<div class="category"><em>últimas</em></div>');
+              // Find each <item> in the RSS feed
+              $(response).find("item").slice(0,63).each(function() {
+                // Build a new element
+                var $build = $('<div class="news2-item"></div>');
+                // Grab the variables from the RSS feed
+                var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
+                var scc_titleReplaced = scc_title.lastIndexOf('-');
+                var scc_link = $(this).find('link').text();
+                var scc_date = $(this).find('pubDate').text();
+                //var scc_category = $(this).find('category').text();
+                var scc_category = $(this).find('source').text();
+                var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
+                var scc_description = $(this).find('description').text();
+                var scc_media = $(this).find('enclosure').attr('url');
+                //var scc_image = $(this).find('itunes\\:image').attr('href');
+                var scc_image = $(this).find('media\\:content').attr('url');
+                // Append elements to the new element
+                $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title.slice(0,scc_titleReplaced)+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                // Append the new element to the container
+                $('.news2-items').append($build);
+              });
+              a2a.init_all();
+              const item = {
+                value: 0,
+                channel: 0,
+                expiry: ts,
+              }
+              localStorage.setItem("the-ts-google-old", JSON.stringify(item));
+            }
+          });
+        }
+        //$('#btn').click(function()
+        $(document).ready(function () {
+          if (window.location.href == "{{ site.url }}/") {
+            parseRSS();
+          }
+        });
+      });
+  </script>
+  {% endif %}
+  <script src="{{ "/assets/js/lazyload.js?ver=1.0.0" | relative_url }}"></script>
+  <!-- Script pointing to search-script.js -->
+  <script src="{{ "/assets/js/simple-jekyll-search.js" | relative_url }}"></script>
+
+  <!-- Configuration -->
   <script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    searchResultTemplate: '<div class="post"><div class="post-img"><a href="{url}?ref=search"><figure><img src="{image}" alt="{title}" title="{title}" src="{image}"></figure></a></div><div class="post-text"><div class="category">{content}</div><h2><a class="post-link" href="{url}?ref=search">{title}</a></h2><span class="post-meta">{date}</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="{{ site.url }}{url}" data-a2a-title="{title}"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div></div>',
+    noResultsText: '<span class="no-results">Nenhum resultado encontrado!</span>',
+    json: '/feeds/feed.json'
+  })
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js
+"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lg-zoom/1.1.0/lg-zoom.min.js"></script>
+  <script defer src="https://flaviusmatis.github.io/simplePagination.js/jquery.simplePagination.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".lightgallery").lightGallery(); 
+    });
+  </script>
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
+  <script type="text/javascript">
+  $(document).ready(function(){ 
+      $(window).scroll(function(){ 
+          if ($(this).scrollTop() > 100) { 
+              $('#scroll').fadeIn(); 
+          } else { 
+              $('#scroll').fadeOut(); 
+          } 
+      }); 
+      $('#scroll').click(function(){ 
+          //$("html, body").animate({ scrollTop: 0 }, 600); 
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+          return false; 
+      }); 
+  });
+  </script>
+{% if page.layout != "home" %}
+
+{% else %}
+<script type="text/javascript">
+$(function() {
+  function parseRSS(callback) {
+    var ts = (new Date()).getTime().toString().slice(0,6);
+    $.ajax({
+      //url: 'https://feeds.buzzsprout.com/1367764.rss',
+      //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.ogol.com.br%2Frss%2Fnoticias.php?='+ts,
+      cache: true,
+      //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+      dataType: 'json',
+      error: function(e) {
+            console.log("XML reading Failed: ", e);        
+      },
+      success: function(response) {
+        //$('#ProductList').empty('');
+          //console.log(response);
+          json = response;
+          for (var i in json.items) {
+            var $build = $('<li class="splide__slide"></li>');
+              //var row = $('<tr>');
+              //row.append($('<td id=' + json[i].Id + '>').html(json[i].Id));
+              //row.append($('<td id=' + json[i].Name + '>').html(json[i].Name));
+              //$('</tr>');
+              //$('#ProductList').append(row);
+            //document.title = json[i].artist+' - '+json[i].music;
+            $build.append('<a href="{{ "/redirect?=" | relative_url }}'+json.items[i].link+'&?t='+json.items[i].title+'">'+json.items[i].title+'</a>');
+            // Append the new element to the container
+            $('.splide__list').append($build);
+          }
+//document.addEventListener( 'DOMContentLoaded', function() {
+  const HotTopics = document.getElementsByClassName("splide");
+  for (let i = 0; i < HotTopics.length; i++) {
+    new Splide( HotTopics[i], {
+    type   : 'loop',
+    drag   : 'free',
+    gap: '64px', 
+    arrows : false,
+    autoWidth: true,
+    pagination : false,
+    focus: 'center',
+    autoScroll: {
+      speed: 1.0,
+      rewind: true,
+    },
+    } ).mount( window.splide.Extensions );
+  }
+//} );
+      }
+    });
+  }
+  //$('#btn').click(function()
+  $(document).ready(function () {
+    function resizeForm(){
+      var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
+      if(width > 1024 && window.location.href == "{{ site.url }}/"){
+          parseRSS();
+          $(".splide").show();
+      } else {
+        $(".splide").remove();
+      }
+      if(width <= 500){
+          $("#column-right").remove();
+      }
+    }
+    window.onresize = resizeForm;
+    resizeForm();
+  });
+});
+$(document).ready(function () {
+  if (window.location.href == "{{ site.url }}/") {
+    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='1020' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
+    $("#banner").show();
+  }
+});
+/*$(document).ready(function () {
+  if (window.location.href == "{{ site.url }}/") {
+    document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';
+  }
+});*/
+$(document).ready(function () {
+  if (window.location.href == "{{ site.url }}/") {
+    document.getElementById("aiscore-free").innerHTML="<iframe src='https://www.aiscore.com/br?width=1200&theme=blue'  height='100%' width='1200' scrolling='auto' border='0' frameborder='0'></iframe>";
+    $("#aiscore-free").show();
+  }
+});
+</script>
+{% endif %}
+  <!--<script>
       ga('send', {
         hitType: 'pageview',
         title: document.title,
@@ -157,6 +829,15 @@
         page: location.pathname,
         transport: 'beacon',
       });
+  </script>-->
+  <script defer src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js" data-turbolinks-eval=false></script>
+  <script>
+  window.addEventListener('load', () => {
+    quicklink.listen();
+  });
+  party.confetti(runButton, {
+    count: party.variation.range(20, 40),
+  });
   </script>
   </body>
 
