@@ -60,7 +60,7 @@
   var findUrlId = url.indexOf('=');
   var findTitle = url.split('&?t=').pop();
   if (url.lastIndexOf('&?t=') != -1) {
-    document.title = decodeURI(findTitle);
+    document.title = decodeURIComponent(findTitle);
   }
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
