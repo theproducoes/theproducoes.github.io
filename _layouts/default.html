@@ -486,7 +486,7 @@
             var user = JSON.parse(localStorage.getItem("the-ts-twitter"));
             var ts = user.expiry;
           }else{
-            setWithExpiry("the-ts-twitter", 0, 0, 3300000);
+            setWithExpiry("the-ts-twitter", 0, 0, 600000);
             var user = JSON.parse(localStorage.getItem("the-ts-twitter"));
             var ts = user.expiry;
           }
