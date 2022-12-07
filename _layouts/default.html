@@ -159,9 +159,6 @@
                   <div id="feed2"></div>
               </div>
             </div>-->
-            <div class="card">
-              <div id="scoreaxis-widget-d8f7b" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:0px;background:rgb(255, 255, 255);width:100%"><iframe id="Iframe" src="https://www.scoreaxis.com/widget/league-top-players/732?autoHeight=1&amp;links=0&amp;playersNumber=10&amp;lang=pt&amp;font=6&amp;fontSize=14&amp;inst=d8f7b" style="width:100%;height:781px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"d8f7b"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-d8f7b iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
-            </div>
             <!--<div class="card">
               <div class="card-title">
                 <h3>Parceiros</h3>
@@ -214,14 +211,11 @@
                 {% endif %}
               </div>
             </div>-->
-            <!--<div class="card fb-page">
-              <div class="card-title">
-                <h3>Página no Facebook</h3>
-              </div>
+            <div class="card fb-page">
               <div class="card-content fb-page">
                 <iframe id="Iframefb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftheproducoes&tabs=timeline&width=355&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="width:100%;height:500px;border:none;transition:all 300ms ease"></iframe>
               </div>
-            </div>-->
+            </div>
           </div>
         </div>
 
@@ -388,7 +382,7 @@
           $.ajax({
             //url: 'https://feeds.buzzsprout.com/1367764.rss',
             //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-            url: 'https://api.allorigins.win/raw?url=https://tntsports.com.br/rss/feed.xml?='+ts,
+            url: 'https://api.codetabs.com/v1/proxy?quest=https://tntsports.com.br/rss/feed.xml?='+ts,
             cache: true,
             //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
             dataType: 'xml',
@@ -397,7 +391,7 @@
               $.ajax({
                 //url: 'https://feeds.buzzsprout.com/1367764.rss',
                 //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-                url: 'https://api.allorigins.win/raw?url=https://tntsports.com.br/rss/feed.xml?='+ts,
+                url: 'https://api.codetabs.com/v1/proxy?quest=https://tntsports.com.br/rss/feed.xml?='+ts,
                 cache: true,
                 //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
                 dataType: 'xml',
@@ -493,8 +487,8 @@
           $.ajax({
             //url: 'https://feeds.buzzsprout.com/1367764.rss',
             //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-            //url: 'https://api.allorigins.win/raw?url=https://rsshub.app/twitter/trends/23424768?='+ts,
-            url: 'https://api.allorigins.win/raw?url=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+            //url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.app/twitter/trends/23424768?='+ts,
+            url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
             cache: true,
             //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
             dataType: 'xml',
@@ -505,8 +499,8 @@
               $.ajax({
                 //url: 'https://feeds.buzzsprout.com/1367764.rss',
                 //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-                //url: 'https://api.allorigins.win/raw?url=https://rsshub.app/twitter/trends/23424768?='+ts,
-                url: 'https://api.allorigins.win/raw?url=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+                //url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.app/twitter/trends/23424768?='+ts,
+                url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
                 cache: true,
                 //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
                 dataType: 'xml',
@@ -592,7 +586,7 @@
           $.ajax({
             //url: 'https://feeds.buzzsprout.com/1367764.rss',
             //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-            url: 'https://api.allorigins.win/raw?url=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
+            url: 'https://api.codetabs.com/v1/proxy?quest=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
             cache: true,
             //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
             dataType: 'xml',
@@ -603,7 +597,7 @@
               $.ajax({
                 //url: 'https://feeds.buzzsprout.com/1367764.rss',
                 //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-                url: 'https://api.allorigins.win/raw?url=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
+                url: 'https://api.codetabs.com/v1/proxy?quest=https://news.google.com/rss/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFp1ZEdvU0JYQjBMVUpTR2dKQ1VpZ0FQAQ?hl=pt-BR&gl=BR&ceid=BR%3Apt-419&oc=11?='+ts,
                 cache: true,
                 //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
                 dataType: 'xml',
@@ -804,7 +798,7 @@ $(function() {
 });
 $(document).ready(function () {
   if (window.location.href == "{{ site.url }}/") {
-    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='1020' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
+    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='320' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
     $("#banner").show();
   }
 });
