@@ -123,15 +123,15 @@
 <!--/DPAC-->
 </div><!--Dayspedia.com widget ENDS-->
             </div>
-            <div class="card">
-              <!--<div class="card-title">
+            <!--<div class="card">
+              <div class="card-title">
                 <h3>Elencos Atualizados</h3>
-              </div>-->
+              </div>
               <div id="scoreaxis-widget-29566" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/732?widgetRows=1%2C1%2C1%2C1%2C1%2C1%2C1%2C0%2C0%2C1&amp;widgetHomeAwayTabs=0&amp;links=0&amp;fontSize=16&amp;lang=pt&amp;font=6&amp;removeBorders=1&amp;header=1&amp;inst=29566" style="width:100%;height:743px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"29566"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-29566 iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
-              <!--<div class="card-subtitle">
+              <div class="card-subtitle">
                 <h4>Brasileirão 2020</h4>
-              </div>-->
-              <!--<div class="card-content teams">
+              </div>
+              <div class="card-content teams">
                   <img src="{{ "/assets/img/escudos/athletico-pr_65.png" | relative_url }}" alt="Athletico-PR" title="Athletico-PR">
                   <img src="{{ "/assets/img/escudos/Atletico-GO-65.png" | relative_url }}" alt="Atlético-GO" title="Atlético-GO">
                   <img src="{{ "/assets/img/escudos/atletico_mg_60x60.png" | relative_url }}" alt="Atlético-MG" title="Atlético-MG">
@@ -152,8 +152,8 @@
                   <img src="{{ "/assets/img/escudos/sao_paulo_60x60.png" | relative_url }}" alt="São Paulo" title="São Paulo">
                   <img src="{{ "/assets/img/escudos/sport65.png" | relative_url }}" alt="Sport" title="Sport">
                   <img src="{{ "/assets/img/escudos/Vasco-65.png" | relative_url }}" alt="Vasco" title="Vasco">
-              </div>-->
-            </div>
+              </div>
+            </div>-->
             <!--<div class="card">
               <div class="card-content news">
                   <div id="feed2"></div>
@@ -796,12 +796,12 @@ $(function() {
     resizeForm();
   });
 });
-$(document).ready(function () {
-  if (window.location.href == "{{ site.url }}/") {
-    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='320' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
-    $("#banner").show();
-  }
-});
+//$(document).ready(function () {
+//  if (window.location.href == "{{ site.url }}/") {
+//    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='320' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
+//    $("#banner").show();
+//  }
+//});
 /*$(document).ready(function () {
   if (window.location.href == "{{ site.url }}/") {
     document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';
