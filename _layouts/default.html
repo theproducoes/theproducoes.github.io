@@ -411,7 +411,7 @@
                     var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
                     var scc_link = $(this).find('link').text();
                     var scc_date = $(this).find('pubDate').text();
-                    var scc_category = $(this).find('category').text();
+                    var scc_category = $(this).find('category:first').text();
                     var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
                     var scc_description = $(this).find('description').text();
                     var scc_media = $(this).find('enclosure').attr('url');
@@ -441,7 +441,7 @@
                 var scc_title = $(this).find('title').text().replace(/"/g, '&#34;');
                 var scc_link = $(this).find('link').text();
                 var scc_date = $(this).find('pubDate').text();
-                var scc_category = $(this).find('category').text();
+                var scc_category = $(this).find('category:first').text();
                 var scc_date_format = new Date(scc_date).toLocaleDateString("pt-BR");
                 var scc_description = $(this).find('description').text();
                 var scc_media = $(this).find('enclosure').attr('url');
@@ -488,7 +488,7 @@
             //url: 'https://feeds.buzzsprout.com/1367764.rss',
             //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
             //url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.app/twitter/trends/23424768?='+ts,
-            url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+            url: 'https://corsproxy.io/?https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
             cache: true,
             //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
             dataType: 'xml',
@@ -500,7 +500,7 @@
                 //url: 'https://feeds.buzzsprout.com/1367764.rss',
                 //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
                 //url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.app/twitter/trends/23424768?='+ts,
-                url: 'https://api.codetabs.com/v1/proxy?quest=https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
+                url: 'https://corsproxy.io/?https://rsshub.rssforever.com/twitter/trends/23424768?='+ts,
                 cache: true,
                 //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
                 dataType: 'xml',
