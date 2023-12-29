@@ -569,7 +569,7 @@ html.turbolinks-progress-bar::before {
 
   </script>-->
 
-  <script type="text/javascript">
+  <!--<script type="text/javascript">
     function liveJogoAberto()
     {
     var setdate = new Date().toLocaleString('en-US', {timeZone: 'America/Fortaleza', hourCycle: 'h23'});
@@ -1254,7 +1254,7 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
       }
     }
     */
-  </script>
+  </script>-->
 
   <script type="text/javascript">
   $(document).ready(function() {
@@ -1263,15 +1263,15 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
       count: 64,
       btnHTML: '<span class="load-more"><a href="#" class="load-more__btn">Ver mais <i class="fas fa-angle-down"></i></a></span>'
     });
-    if (window.location.href == "{{ site.url }}/") {
-      liveJogoAberto();
+    //if (window.location.href == "{{ site.url }}/") {
+      //liveJogoAberto();
       //liveVivaOEsporte();
       //liveG4BandSports();
-      liveOsDonosDaBola();
+      //liveOsDonosDaBola();
       //liveEsporteTotal();
       //liveTerceiroTempo();
       //liveSuperCopaDaUefa();
-    }
+    //}
   });
   $(document).on('page:change', function(event) {
     $('.some-list').simpleLoadMore({
@@ -1313,15 +1313,15 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
   $(document).on('page:load', function(event) {
     Turbolinks.ProgressBar.advanceTo(100);
     Turbolinks.ProgressBar.done();
-    if (window.location.href == "{{ site.url }}/") {
-      liveJogoAberto();
+    //if (window.location.href == "{{ site.url }}/") {
+      //liveJogoAberto();
       //liveVivaOEsporte();
       //liveG4BandSports();
-      liveOsDonosDaBola();
+      //liveOsDonosDaBola();
       //liveEsporteTotal();
       //liveTerceiroTempo();
       //liveSuperCopaDaUefa();
-    }
+    //}
     //quicklink.listen();
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
